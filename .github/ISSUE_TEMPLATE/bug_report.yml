@@ -1,0 +1,33 @@
+name: Bug report
+description: Something does not work
+labels: [bug]
+body:
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options: [Chrome, Edge, Brave, Opera, Firefox, Other]
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Sova version }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got. A site where it reproduces helps a lot.
+    validations: { required: true }
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: Errors from the page console and from the extension's background page, if any.
+      render: shell
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before you post
+      options:
+        - label: I have removed my API token and any private page content from this report.
+          required: true

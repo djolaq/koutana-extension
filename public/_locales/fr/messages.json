@@ -1,0 +1,116 @@
+{
+  "extName": { "message": "Sova" },
+  "extDescription": {
+    "message": "Traduisez, réécrivez et interrogez n'importe quelle page — avec votre propre compte Infomaniak AI."
+  },
+
+  "cmdOpenSidePanel": { "message": "Ouvrir le panneau Sova" },
+  "cmdTranslateSelection": { "message": "Traduire la sélection" },
+
+  "ctxTranslateSelection": { "message": "Traduire avec Sova" },
+  "ctxSummarizePage": { "message": "Résumer cette page avec Sova" },
+  "ctxAskAboutPage": { "message": "Interroger Sova sur cette page" },
+
+  "settings": { "message": "Réglages" },
+  "openSettings": { "message": "Ouvrir les réglages" },
+  "settingsTitle": { "message": "Réglages de Sova" },
+  "close": { "message": "Fermer" },
+  "copy": { "message": "Copier" },
+  "send": { "message": "Envoyer" },
+  "stop": { "message": "Arrêter" },
+
+  "notConnectedTitle": { "message": "Aucun compte connecté" },
+  "notConnectedBody": {
+    "message": "Sova consomme vos propres crédits Infomaniak AI. Connectez votre compte pour commencer."
+  },
+  "connectAccount": { "message": "Connecter mon compte" },
+  "connectedTitle": { "message": "Compte connecté" },
+  "connectedBody": {
+    "message": "Les requêtes sont décomptées de vos crédits AI Tools Infomaniak."
+  },
+  "disconnect": { "message": "Déconnecter" },
+  "connectAndVerify": { "message": "Connecter et vérifier" },
+
+  "accountSection": { "message": "Compte Infomaniak" },
+  "modelsSection": { "message": "Modèles" },
+  "languageSection": { "message": "Langues" },
+  "behaviourSection": { "message": "Comportement" },
+
+  "stepOpenAiTools": {
+    "message": "Ouvrir AI Tools dans le Manager Infomaniak et relever l'ID du produit"
+  },
+  "stepCreateToken": { "message": "Créer un jeton API avec la portée ai-tools" },
+  "stepPaste": { "message": "Coller les deux ci-dessous" },
+
+  "fieldProductId": { "message": "ID du produit AI" },
+  "fieldProductIdHint": { "message": "Le numéro affiché sur la page AI Tools de votre Manager." },
+  "fieldToken": { "message": "Jeton API" },
+  "fieldTokenHint": {
+    "message": "Portée : ai-tools. Définissez une date d'expiration à la création."
+  },
+  "storageWarning": {
+    "message": "Le jeton est stocké localement dans ce navigateur uniquement. Il n'est jamais synchronisé ni envoyé ailleurs qu'à api.infomaniak.com."
+  },
+
+  "modelsEmpty": {
+    "message": "Connectez votre compte pour charger les modèles disponibles sur votre produit AI."
+  },
+  "tier_quick": { "message": "Tâches rapides" },
+  "tier_quick_hint": {
+    "message": "Réécriture en ligne et courtes traductions. Privilégiez un petit modèle rapide."
+  },
+  "tier_standard": { "message": "Tâches standard" },
+  "tier_standard_hint": { "message": "Traduction de page et résumés." },
+  "tier_deep": { "message": "Tâches approfondies" },
+  "tier_deep_hint": {
+    "message": "Conversation dans le panneau. Privilégiez le modèle le plus puissant dont vous disposez."
+  },
+
+  "fieldUiLanguage": { "message": "Langue de l'interface" },
+  "fieldTargetLanguage": { "message": "Traduire vers" },
+  "followBrowser": { "message": "Suivre mon navigateur" },
+  "fieldTheme": { "message": "Thème" },
+  "themeSystem": { "message": "Système" },
+  "themeLight": { "message": "Clair" },
+  "themeDark": { "message": "Sombre" },
+  "fieldWritingAssistant": {
+    "message": "Afficher l'assistant d'écriture dans les champs de texte"
+  },
+
+  "actionOpenPanel": { "message": "Ouvrir le panneau" },
+  "actionTranslatePage": { "message": "Traduire cette page" },
+  "actionTranslateSelection": { "message": "Traduire la sélection" },
+  "poweredBy": { "message": "Fonctionne avec vos crédits Infomaniak AI." },
+
+  "usePageContext": { "message": "Utiliser cette page" },
+  "panelEmptyTitle": { "message": "Interroger cette page" },
+  "panelEmptyBody": {
+    "message": "Résumez-la, extrayez les chiffres clés, ou posez n'importe quelle question sur ce que vous lisez."
+  },
+  "askPlaceholder": { "message": "Posez une question…" },
+
+  "translating": { "message": "Traduction en cours…" },
+  "translation": { "message": "Traduction" },
+  "translatingPage": { "message": "Traduction de la page…" },
+  "pageTranslated": { "message": "Page traduite. Relancez l'action pour restaurer l'original." },
+
+  "error_no_credentials": {
+    "message": "Connectez d'abord votre compte Infomaniak dans les réglages."
+  },
+  "error_unauthorized": {
+    "message": "Ce jeton API a été refusé. Vérifiez-le ou créez-en un nouveau."
+  },
+  "error_forbidden": {
+    "message": "Ce jeton n'a pas accès à ce produit AI. Vérifiez la portée ai-tools et l'ID du produit."
+  },
+  "error_not_found": {
+    "message": "Produit AI ou modèle inconnu. Vérifiez l'ID du produit dans votre Manager."
+  },
+  "error_insufficient_credits": { "message": "Vos crédits Infomaniak AI sont épuisés." },
+  "error_rate_limited": { "message": "Trop de requêtes. Réessayez dans un instant." },
+  "error_server_error": { "message": "Infomaniak AI est indisponible pour le moment." },
+  "error_network": { "message": "Impossible de joindre api.infomaniak.com." },
+  "error_aborted": { "message": "Annulé." },
+  "error_unknown": { "message": "Une erreur est survenue." },
+  "errorNoSelection": { "message": "Sélectionnez d'abord du texte." }
+}

@@ -1,0 +1,185 @@
+/**
+ * Sova design tokens — the single source of truth for every colour, radius,
+ * space and duration in the extension.
+ *
+ * Rules:
+ *   1. No component may contain a raw hex, px radius or ms duration. If you need
+ *      a value that is not here, add a token here first.
+ *   2. Tokens are plain CSS custom properties so they work identically in React
+ *      surfaces (popup, side panel, options) and inside the content-script
+ *      Shadow DOM, where Tailwind's preflight must not leak.
+ *   3. Light is the base. Dark redefines only what changes, twice: once for
+ *      `prefers-color-scheme` and once for an explicit `[data-theme="dark"]`,
+ *      so the in-app theme switch wins in both directions.
+ */
+
+:root,
+:host {
+  /* — Brand ------------------------------------------------------------- */
+  --sova-hue: 232;
+
+  /* — Surfaces ---------------------------------------------------------- */
+  --sova-bg: #f7f8fa;
+  --sova-surface: #ffffff;
+  --sova-surface-sunken: #eef0f4;
+  --sova-surface-hover: #f2f4f8;
+  --sova-overlay-scrim: rgb(15 18 28 / 0.32);
+
+  /* — Text -------------------------------------------------------------- */
+  --sova-text: #12151f;
+  --sova-text-muted: #5b6377;
+  --sova-text-subtle: #868ea3;
+  --sova-text-on-primary: #ffffff;
+
+  /* — Lines ------------------------------------------------------------- */
+  --sova-border: #dfe3eb;
+  --sova-border-strong: #c3c9d6;
+  --sova-focus-ring: hsl(var(--sova-hue) 90% 58%);
+
+  /* — Accents ----------------------------------------------------------- */
+  --sova-primary: hsl(var(--sova-hue) 78% 54%);
+  --sova-primary-hover: hsl(var(--sova-hue) 78% 47%);
+  --sova-primary-soft: hsl(var(--sova-hue) 90% 96%);
+  --sova-primary-soft-border: hsl(var(--sova-hue) 70% 88%);
+
+  --sova-success: #157f4d;
+  --sova-success-soft: #e7f6ee;
+  --sova-warning: #9a6200;
+  --sova-warning-soft: #fdf3e2;
+  --sova-danger: #b3261e;
+  --sova-danger-soft: #fdeceb;
+
+  /* — Typography -------------------------------------------------------- */
+  --sova-font:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --sova-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+
+  --sova-text-xs: 0.6875rem; /* 11px — badges, counters */
+  --sova-text-sm: 0.75rem; /* 12px — helper text */
+  --sova-text-base: 0.8125rem; /* 13px — extension body copy */
+  --sova-text-md: 0.875rem; /* 14px — side-panel prose */
+  --sova-text-lg: 1rem; /* 16px — section titles */
+  --sova-text-xl: 1.25rem; /* 20px — page titles */
+
+  --sova-leading-tight: 1.25;
+  --sova-leading-normal: 1.5;
+  --sova-leading-prose: 1.65;
+
+  --sova-weight-normal: 400;
+  --sova-weight-medium: 500;
+  --sova-weight-semibold: 600;
+
+  /* — Space (4px base) -------------------------------------------------- */
+  --sova-space-1: 0.25rem;
+  --sova-space-2: 0.5rem;
+  --sova-space-3: 0.75rem;
+  --sova-space-4: 1rem;
+  --sova-space-5: 1.5rem;
+  --sova-space-6: 2rem;
+  --sova-space-7: 3rem;
+
+  /* — Radii ------------------------------------------------------------- */
+  --sova-radius-sm: 6px;
+  --sova-radius-md: 10px;
+  --sova-radius-lg: 14px;
+  --sova-radius-full: 9999px;
+
+  /* — Elevation --------------------------------------------------------- */
+  --sova-shadow-sm: 0 1px 2px rgb(15 18 28 / 0.06), 0 1px 1px rgb(15 18 28 / 0.04);
+  --sova-shadow-md: 0 4px 12px rgb(15 18 28 / 0.08), 0 1px 3px rgb(15 18 28 / 0.06);
+  --sova-shadow-lg: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08);
+
+  /* — Motion ------------------------------------------------------------ */
+  --sova-duration-fast: 120ms;
+  --sova-duration-base: 200ms;
+  --sova-duration-slow: 320ms;
+  --sova-ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* — Layering (content-script overlays only) --------------------------- */
+  --sova-z-handle: 2147483000;
+  --sova-z-popover: 2147483200;
+  --sova-z-scrim: 2147483400;
+
+  /* — Component sizing -------------------------------------------------- */
+  --sova-control-height: 32px;
+  --sova-control-height-sm: 26px;
+  --sova-popup-width: 360px;
+  --sova-tap-target: 32px; /* desktop-only surfaces; 44px on touch */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']),
+  :host(:not([data-theme='light'])) {
+    --sova-bg: #0e1017;
+    --sova-surface: #171a23;
+    --sova-surface-sunken: #10131b;
+    --sova-surface-hover: #1e222d;
+    --sova-overlay-scrim: rgb(0 0 0 / 0.5);
+
+    --sova-text: #eef0f6;
+    --sova-text-muted: #a3abbe;
+    --sova-text-subtle: #767f94;
+
+    --sova-border: #272c39;
+    --sova-border-strong: #3a4152;
+
+    --sova-primary: hsl(var(--sova-hue) 85% 68%);
+    --sova-primary-hover: hsl(var(--sova-hue) 85% 74%);
+    --sova-primary-soft: hsl(var(--sova-hue) 40% 18%);
+    --sova-primary-soft-border: hsl(var(--sova-hue) 35% 28%);
+    --sova-text-on-primary: #0b0e15;
+
+    --sova-success: #5bd39a;
+    --sova-success-soft: #10261d;
+    --sova-warning: #ecb45c;
+    --sova-warning-soft: #2a2113;
+    --sova-danger: #f28b84;
+    --sova-danger-soft: #2c1615;
+
+    --sova-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --sova-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+    --sova-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+  }
+}
+
+:root[data-theme='dark'],
+:host([data-theme='dark']) {
+  --sova-bg: #0e1017;
+  --sova-surface: #171a23;
+  --sova-surface-sunken: #10131b;
+  --sova-surface-hover: #1e222d;
+  --sova-overlay-scrim: rgb(0 0 0 / 0.5);
+
+  --sova-text: #eef0f6;
+  --sova-text-muted: #a3abbe;
+  --sova-text-subtle: #767f94;
+
+  --sova-border: #272c39;
+  --sova-border-strong: #3a4152;
+
+  --sova-primary: hsl(var(--sova-hue) 85% 68%);
+  --sova-primary-hover: hsl(var(--sova-hue) 85% 74%);
+  --sova-primary-soft: hsl(var(--sova-hue) 40% 18%);
+  --sova-primary-soft-border: hsl(var(--sova-hue) 35% 28%);
+  --sova-text-on-primary: #0b0e15;
+
+  --sova-success: #5bd39a;
+  --sova-success-soft: #10261d;
+  --sova-warning: #ecb45c;
+  --sova-warning-soft: #2a2113;
+  --sova-danger: #f28b84;
+  --sova-danger-soft: #2c1615;
+
+  --sova-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --sova-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+  --sova-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  :host {
+    --sova-duration-fast: 1ms;
+    --sova-duration-base: 1ms;
+    --sova-duration-slow: 1ms;
+  }
+}

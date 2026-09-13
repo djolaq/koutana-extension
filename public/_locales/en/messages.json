@@ -1,0 +1,104 @@
+{
+  "extName": { "message": "Sova" },
+  "extDescription": {
+    "message": "Translate, rewrite and ask questions about any page — powered by your own Infomaniak AI account."
+  },
+
+  "cmdOpenSidePanel": { "message": "Open the Sova panel" },
+  "cmdTranslateSelection": { "message": "Translate the selection" },
+
+  "ctxTranslateSelection": { "message": "Translate this with Sova" },
+  "ctxSummarizePage": { "message": "Summarise this page with Sova" },
+  "ctxAskAboutPage": { "message": "Ask Sova about this page" },
+
+  "settings": { "message": "Settings" },
+  "openSettings": { "message": "Open settings" },
+  "settingsTitle": { "message": "Sova settings" },
+  "close": { "message": "Close" },
+  "copy": { "message": "Copy" },
+  "send": { "message": "Send" },
+  "stop": { "message": "Stop" },
+
+  "notConnectedTitle": { "message": "No account connected" },
+  "notConnectedBody": {
+    "message": "Sova runs on your own Infomaniak AI credits. Connect your account to get started."
+  },
+  "connectAccount": { "message": "Connect my account" },
+  "connectedTitle": { "message": "Account connected" },
+  "connectedBody": { "message": "Requests are billed to your Infomaniak AI Tools credits." },
+  "disconnect": { "message": "Disconnect" },
+  "connectAndVerify": { "message": "Connect and verify" },
+
+  "accountSection": { "message": "Infomaniak account" },
+  "modelsSection": { "message": "Models" },
+  "languageSection": { "message": "Languages" },
+  "behaviourSection": { "message": "Behaviour" },
+
+  "stepOpenAiTools": {
+    "message": "Open AI Tools in the Infomaniak Manager and note your product ID"
+  },
+  "stepCreateToken": { "message": "Create an API token with the ai-tools scope" },
+  "stepPaste": { "message": "Paste both below" },
+
+  "fieldProductId": { "message": "AI product ID" },
+  "fieldProductIdHint": { "message": "The number shown in the AI Tools page of your Manager." },
+  "fieldToken": { "message": "API token" },
+  "fieldTokenHint": { "message": "Scope: ai-tools. Set an expiry date when you create it." },
+  "storageWarning": {
+    "message": "The token is stored locally in this browser only. It is never synchronised and never sent anywhere except api.infomaniak.com."
+  },
+
+  "modelsEmpty": {
+    "message": "Connect your account to load the models available on your AI product."
+  },
+  "tier_quick": { "message": "Quick tasks" },
+  "tier_quick_hint": {
+    "message": "Inline rewriting and short translations. Favour a small, fast model."
+  },
+  "tier_standard": { "message": "Standard tasks" },
+  "tier_standard_hint": { "message": "Page translation and summaries." },
+  "tier_deep": { "message": "Deep tasks" },
+  "tier_deep_hint": { "message": "Side-panel conversation. Favour the strongest model you have." },
+
+  "fieldUiLanguage": { "message": "Interface language" },
+  "fieldTargetLanguage": { "message": "Translate into" },
+  "followBrowser": { "message": "Follow my browser" },
+  "fieldTheme": { "message": "Theme" },
+  "themeSystem": { "message": "System" },
+  "themeLight": { "message": "Light" },
+  "themeDark": { "message": "Dark" },
+  "fieldWritingAssistant": { "message": "Show the writing assistant in text fields" },
+
+  "actionOpenPanel": { "message": "Open the panel" },
+  "actionTranslatePage": { "message": "Translate this page" },
+  "actionTranslateSelection": { "message": "Translate the selection" },
+  "poweredBy": { "message": "Runs on your Infomaniak AI credits." },
+
+  "usePageContext": { "message": "Use this page" },
+  "panelEmptyTitle": { "message": "Ask about this page" },
+  "panelEmptyBody": {
+    "message": "Summarise it, pull out the key figures, or ask anything about what you are reading."
+  },
+  "askPlaceholder": { "message": "Ask a question…" },
+
+  "translating": { "message": "Translating…" },
+  "translation": { "message": "Translation" },
+  "translatingPage": { "message": "Translating the page…" },
+  "pageTranslated": { "message": "Page translated. Run the action again to restore the original." },
+
+  "error_no_credentials": { "message": "Connect your Infomaniak account in the settings first." },
+  "error_unauthorized": { "message": "This API token was rejected. Check it or create a new one." },
+  "error_forbidden": {
+    "message": "This token cannot access that AI product. Check the ai-tools scope and the product ID."
+  },
+  "error_not_found": {
+    "message": "Unknown AI product or model. Check the product ID in your Manager."
+  },
+  "error_insufficient_credits": { "message": "Your Infomaniak AI credits are exhausted." },
+  "error_rate_limited": { "message": "Too many requests. Try again in a moment." },
+  "error_server_error": { "message": "Infomaniak AI is unavailable right now." },
+  "error_network": { "message": "Could not reach api.infomaniak.com." },
+  "error_aborted": { "message": "Cancelled." },
+  "error_unknown": { "message": "Something went wrong." },
+  "errorNoSelection": { "message": "Select some text first." }
+}

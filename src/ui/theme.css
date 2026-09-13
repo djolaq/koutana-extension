@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@import './tokens/tokens.css';
+
+/**
+ * Bridges the design tokens into Tailwind v4 utilities so components can write
+ * `bg-surface text-muted rounded-md` instead of inline `var(--sova-*)`.
+ * Tailwind v4 is CSS-first: this @theme block IS the Tailwind config.
+ */
+@theme inline {
+  --color-bg: var(--sova-bg);
+  --color-surface: var(--sova-surface);
+  --color-sunken: var(--sova-surface-sunken);
+  --color-hover: var(--sova-surface-hover);
+
+  --color-fg: var(--sova-text);
+  --color-muted: var(--sova-text-muted);
+  --color-subtle: var(--sova-text-subtle);
+  --color-on-primary: var(--sova-text-on-primary);
+
+  --color-line: var(--sova-border);
+  --color-line-strong: var(--sova-border-strong);
+
+  --color-primary: var(--sova-primary);
+  --color-primary-hover: var(--sova-primary-hover);
+  --color-primary-soft: var(--sova-primary-soft);
+
+  --color-success: var(--sova-success);
+  --color-success-soft: var(--sova-success-soft);
+  --color-warning: var(--sova-warning);
+  --color-warning-soft: var(--sova-warning-soft);
+  --color-danger: var(--sova-danger);
+  --color-danger-soft: var(--sova-danger-soft);
+
+  --font-sans: var(--sova-font);
+  --font-mono: var(--sova-font-mono);
+
+  --text-xs: var(--sova-text-xs);
+  --text-sm: var(--sova-text-sm);
+  --text-base: var(--sova-text-base);
+  --text-md: var(--sova-text-md);
+  --text-lg: var(--sova-text-lg);
+  --text-xl: var(--sova-text-xl);
+
+  --radius-sm: var(--sova-radius-sm);
+  --radius-md: var(--sova-radius-md);
+  --radius-lg: var(--sova-radius-lg);
+
+  --shadow-sm: var(--sova-shadow-sm);
+  --shadow-md: var(--sova-shadow-md);
+  --shadow-lg: var(--sova-shadow-lg);
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    background: var(--sova-bg);
+    color: var(--sova-text);
+    font-family: var(--sova-font);
+    font-size: var(--sova-text-base);
+    line-height: var(--sova-leading-normal);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* One visible focus style everywhere, keyboard-only. */
+  :focus-visible {
+    outline: 2px solid var(--sova-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--sova-radius-sm);
+  }
+
+  ::selection {
+    background: var(--sova-primary-soft);
+    color: var(--sova-text);
+  }
+}

@@ -1,0 +1,6 @@
+# Markdown tables and ASCII diagrams in the docs are hand-aligned; Prettier
+# reflows them and breaks pipes inside code spans. Docs are reviewed by humans.
+*.md
+pnpm-lock.yaml
+.output
+.wxt

@@ -1,0 +1,73 @@
+# Design system
+
+## Principle
+
+Sova appears **on top of someone else's page**. The design language is therefore
+quiet: one accent colour, one elevation for floating surfaces, no decoration that
+competes with the content underneath. The extension should read as part of the
+browser, not as a third-party widget.
+
+Three rules the whole system follows:
+
+1. **Tokens or nothing.** Every colour, radius, spacing step and duration is a CSS
+   custom property in `src/ui/tokens/tokens.css`. A literal value in a component
+   is a review rejection.
+2. **Light is the base, dark is a redefinition.** Dark is declared twice — once
+   under `prefers-color-scheme`, once under `[data-theme="dark"]` — so the in-app
+   switch wins in both directions.
+3. **One surface at a time.** The content script draws a single overlay driven by
+   one state machine. We never stack popovers over a host page.
+
+## Tokens
+
+| Group     | Tokens                                                                             | Notes                                                                   |
+| --------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Surfaces  | `--sova-bg`, `--sova-surface`, `--sova-surface-sunken`, `--sova-surface-hover`     | `surface` is where content sits; `bg` is the page behind it             |
+| Text      | `--sova-text`, `--sova-text-muted`, `--sova-text-subtle`, `--sova-text-on-primary` | three levels, no more                                                   |
+| Lines     | `--sova-border`, `--sova-border-strong`, `--sova-focus-ring`                       | focus ring is a separate token so it survives theme changes             |
+| Accent    | `--sova-primary`, `-hover`, `-soft`, `-soft-border`                                | derived from `--sova-hue: 232` — change the hue, the whole accent moves |
+| Status | `--sova-success` / `-warning` / `-danger`, each with a `-soft` variant | soft = background, solid = text/icon |
+| Type      | `--sova-text-xs … -xl`, three line-heights, three weights                          | 13px body: extension UI is denser than a web page                       |
+| Space     | `--sova-space-1 … -7`                                                              | 4px base                                                                |
+| Radius    | `sm 6 · md 10 · lg 14 · full`                                                      | controls `md`, cards `lg`                                               |
+| Elevation | `--sova-shadow-sm` / `-md` / `-lg` | `lg` is reserved for the content-script overlay |
+| Motion | `--sova-duration-fast` / `-base` / `-slow`, `--sova-ease` | all collapse to 1 ms under `prefers-reduced-motion` |
+| Layering | `--sova-z-handle` / `-popover` / `-scrim` | near the top of the 32-bit z-index range, because host pages fight dirty |
+
+Tailwind v4 consumes these through the `@theme inline` block in
+`src/ui/theme.css`, so components write `bg-surface text-muted rounded-md` and the
+token stays the single source of truth.
+
+## Primitives
+
+- `Button` — `primary | secondary | ghost | danger` × `sm | md`, plus `loading`
+  (keeps the accessible name while showing a spinner) and `iconOnly`.
+- `Field` / `TextField` / `SelectField` — label, control, hint or error, with
+  `aria-describedby` and `aria-invalid` wired automatically. Never hand-roll a
+  label; a floating hint that screen readers miss is the bug this prevents.
+- `Callout` — `info | success | warning | danger`. `danger` renders `role="alert"`.
+- `Card` — titled section with optional header action. The options page is cards.
+
+## Accessibility baseline (non-negotiable)
+
+- Contrast ≥ 4.5:1 for body text and ≥ 3:1 for UI borders, in both themes.
+- One visible focus style, keyboard-only (`:focus-visible`), never removed.
+- Every action reachable by keyboard; the overlay traps nothing.
+- Status changes announced: `aria-live="polite"` on the overlay, `role="alert"`
+  on errors, `role="progressbar"` with a real `aria-valuenow` on page translation.
+- Motion respects `prefers-reduced-motion`.
+- Never colour alone: every status carries an icon or a word.
+
+## Writing (UX copy)
+
+- Say what happened and what to do next. `error_forbidden` names the two things to
+  check, rather than saying "access denied".
+- Never blame the user, never expose an HTTP status.
+- Consistent nouns across locales: _AI product_, _API token_, _credits_, _panel_.
+- English is the source; every string is written in English first, then translated.
+
+## Canvas
+
+The visual reference — palette, type scale, components, and the three v1 screens
+(popup, overlay, side panel) — is maintained as a Claude Design canvas so screens
+can be reviewed before they are built. Link it here once published.
