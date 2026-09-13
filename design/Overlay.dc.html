@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    a { color: #2e47e5; } a:hover { color: #1a33d5; }
+    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; background: #f7f8fa; min-height: 100%; box-sizing: border-box; color: #12151f">
+  <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Overlay on a host page</h1>
+  <p style="margin: 0 0 24px; font-size: 14px; color: #5b6377; max-width: 72ch; text-wrap: pretty">
+    One floating surface, one state machine — never a stack of popovers over someone else's page.
+    It lives in a Shadow DOM, so the page's CSS cannot deform it and ours cannot deform the page.
+  </p>
+
+  <!-- FAKE HOST PAGE -->
+  <div style="position: relative; border: 1px solid #dfe3eb; border-radius: 14px; overflow: hidden; background: #fff; height: 560px">
+
+    <!-- host chrome -->
+    <div style="height: 38px; background: #eef0f4; border-bottom: 1px solid #dfe3eb; display: flex; align-items: center; gap: 8px; padding: 0 14px">
+      <span style="width: 10px; height: 10px; border-radius: 9999px; background: #c3c9d6"></span>
+      <span style="width: 10px; height: 10px; border-radius: 9999px; background: #c3c9d6"></span>
+      <span style="width: 10px; height: 10px; border-radius: 9999px; background: #c3c9d6"></span>
+      <div style="margin-left: 12px; flex-grow: 1; height: 22px; border-radius: 9999px; background: #fff; border: 1px solid #dfe3eb; display: flex; align-items: center; padding: 0 10px; font-size: 11px; color: #868ea3">nzz.ch/wirtschaft/…</div>
+    </div>
+
+    <!-- host content -->
+    <div style="padding: 32px 40px; font-family: Georgia, 'Times New Roman', serif">
+      <p style="margin: 0 0 6px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #868ea3; font-family: ui-sans-serif, system-ui, sans-serif">Wirtschaft</p>
+      <h2 style="margin: 0 0 14px; font-size: 30px; line-height: 1.15; max-width: 22ch">Die Schweiz setzt auf souveräne Rechenzentren</h2>
+      <p style="margin: 0 0 12px; font-size: 16px; line-height: 1.7; color: #3b4252; max-width: 62ch">
+        Immer mehr Unternehmen verlagern ihre Rechenlasten zurück in die Schweiz. Der Grund ist
+        selten der Preis — es geht um die Frage, wo die Daten am Ende liegen und wer sie lesen darf.
+      </p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3b4252; max-width: 62ch">
+        <span style="background: #cbd1f6; box-shadow: 0 0 0 2px #cbd1f6">Für viele Betriebe ist die Datenhoheit inzwischen ein Verkaufsargument geworden, nicht mehr nur eine Auflage der Compliance-Abteilung.</span>
+        Die Nachfrage nach lokal gehosteten Diensten wächst entsprechend schnell.
+      </p>
+    </div>
+
+    <!-- OVERLAY -->
+    <div style="position: absolute; right: 20px; bottom: 20px; width: 360px; background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08); overflow: hidden">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; border-bottom: 1px solid #dfe3eb">
+        <div style="display: flex; align-items: center; gap: 8px">
+          <svg width="14" height="14" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="30" fill="#2e47e5"/><circle cx="48" cy="66" r="17" fill="#fff"/><circle cx="80" cy="66" r="17" fill="#fff"/><circle cx="48" cy="66" r="7" fill="#1b2547"/><circle cx="80" cy="66" r="7" fill="#1b2547"/></svg>
+          <span style="font-size: 12px; font-weight: 600">Translation</span>
+          <span style="font-size: 11px; color: #868ea3; font-family: ui-monospace, Menlo, monospace">de → fr</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#868ea3" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </div>
+      <div style="padding: 10px 12px; font-size: 13px; line-height: 1.65">
+        Pour beaucoup d'entreprises, la souveraineté des données est devenue un argument de vente,
+        et non plus seulement une exigence du service conformité.<span style="display: inline-block; width: 2px; height: 1em; background: #2e47e5; margin-left: 2px; vertical-align: text-bottom"></span>
+      </div>
+      <div style="display: flex; justify-content: flex-end; gap: 6px; padding: 8px 12px; border-top: 1px solid #dfe3eb">
+        <span style="height: 26px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 500; display: inline-flex; align-items: center; background: #fff; border: 1px solid #dfe3eb">Copy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATES -->
+  <p class="lbl" style="margin: 28px 0 12px">The other three states of the same surface</p>
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+
+    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 4px 12px rgb(15 18 28 / 0.08); overflow: hidden">
+      <div style="padding: 8px 12px; border-bottom: 1px solid #dfe3eb; font-size: 12px; font-weight: 600">Translating the page…</div>
+      <div style="padding: 12px">
+        <div style="height: 6px; border-radius: 9999px; background: #eef0f4; overflow: hidden">
+          <div style="width: 62%; height: 100%; background: #2e47e5; border-radius: 9999px"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 12px; color: #5b6377">
+          <span>62%</span><span>batch 13 / 21</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 4px 12px rgb(15 18 28 / 0.08); overflow: hidden">
+      <div style="padding: 8px 12px; border-bottom: 1px solid #dfe3eb; font-size: 12px; font-weight: 600">Sova</div>
+      <div style="padding: 12px; font-size: 13px; line-height: 1.65; color: #12151f">
+        Page translated. Run the action again to restore the original.
+      </div>
+    </div>
+
+    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 4px 12px rgb(15 18 28 / 0.08); overflow: hidden">
+      <div style="padding: 8px 12px; border-bottom: 1px solid #dfe3eb; font-size: 12px; font-weight: 600">Sova</div>
+      <div style="padding: 12px; display: flex; gap: 8px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b3261e" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16h.01"/></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #b3261e">This token cannot access that AI product. Check the ai-tools scope and the product ID.</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin: 16px 0 0; font-size: 12px; color: #5b6377; max-width: 72ch; text-wrap: pretty">
+    Errors name the two things to check rather than reporting a status code — see the UX copy rules
+    in <span style="font-family: ui-monospace, Menlo, monospace">docs/design-system.md</span>.
+  </p>
+</div>
+</x-dc>
+</body>
+</html>

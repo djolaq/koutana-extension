@@ -8,3 +8,7 @@ coverage/
 .env
 .env.*
 !.env.example
+
+# Seeded design canvas output (regenerated from design/*.dc.html)
+design/*.html
+!design/*.dc.html

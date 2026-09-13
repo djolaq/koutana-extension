@@ -68,6 +68,13 @@ token stays the single source of truth.
 
 ## Canvas
 
-The visual reference — palette, type scale, components, and the three v1 screens
-(popup, overlay, side panel) — is maintained as a Claude Design canvas so screens
-can be reviewed before they are built. Link it here once published.
+The visual reference lives as a Claude Design canvas — tokens, components, and the
+v1 screens (popup, overlay on a host page, side panel, options/onboarding) in both
+themes:
+
+<https://claude.ai/code/artifact/af678ed6-4fb1-40fc-9fa3-b783401b31f2>
+
+Its sources are the artboards in `design/*.dc.html` plus `design/canvas.json`. Edit
+those and re-seed to update the canvas; the seeded `.html` is build output and is
+git-ignored. The canvas is a mockup of the design system, not its source — when the
+two disagree, `src/ui/tokens/tokens.css` wins and the canvas gets updated.

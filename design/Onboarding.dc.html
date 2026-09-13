@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    a { color: #2e47e5; } a:hover { color: #1a33d5; }
+    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
+    .card { background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 1px 2px rgb(15 18 28 / 0.06); overflow: hidden; }
+    .card-h { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #dfe3eb; font-size: 16px; font-weight: 600; }
+    .input { height: 32px; border-radius: 10px; border: 1px solid #dfe3eb; background: #fff; padding: 0 10px; font-size: 13px; display: flex; align-items: center; }
+    .step { display: flex; gap: 10px; align-items: flex-start; }
+    .num { width: 20px; height: 20px; border-radius: 9999px; background: #eceefe; color: #2e47e5; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; background: #f7f8fa; min-height: 100%; box-sizing: border-box; color: #12151f">
+  <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Options — onboarding</h1>
+  <p style="margin: 0 0 28px; font-size: 14px; color: #5b6377; max-width: 66ch; text-wrap: pretty">
+    The one screen where the product succeeds or fails. Three numbered steps with direct links into
+    the Manager, one button that actually verifies, and an honest sentence about where the token is kept.
+  </p>
+
+  <div style="max-width: 680px; display: flex; flex-direction: column; gap: 20px">
+
+    <div class="card">
+      <div class="card-h">Infomaniak account</div>
+      <div style="padding: 16px; display: flex; flex-direction: column; gap: 16px">
+
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <div class="step">
+            <span class="num">1</span>
+            <div style="font-size: 13px; line-height: 1.5">
+              <a href="#">Open AI Tools in the Infomaniak Manager</a> and note your product ID.
+            </div>
+          </div>
+          <div class="step">
+            <span class="num">2</span>
+            <div style="font-size: 13px; line-height: 1.5">
+              <a href="#">Create an API token</a> with the <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #eef0f4; padding: 1px 5px; border-radius: 4px">ai-tools</span> scope.
+            </div>
+          </div>
+          <div class="step">
+            <span class="num">3</span>
+            <div style="font-size: 13px; line-height: 1.5">Paste both below.</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 500">AI product ID</span>
+            <div class="input" style="color: #12151f">123456</div>
+            <span style="font-size: 12px; color: #5b6377">The number shown in the AI Tools page.</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 500">API token</span>
+            <div class="input" style="letter-spacing: 0.18em">••••••••••••••••••</div>
+            <span style="font-size: 12px; color: #5b6377">Set an expiry date when you create it.</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 12px">
+          <span style="height: 32px; padding: 0 12px; border-radius: 10px; background: #2e47e5; color: #fff; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px">
+            <span style="width: 14px; height: 14px; border-radius: 9999px; border: 2px solid rgb(255 255 255 / 0.45); border-top-color: #fff; display: inline-block"></span>
+            Connect and verify
+          </span>
+          <span style="font-size: 12px; color: #5b6377">Calls <span style="font-family: ui-monospace, Menlo, monospace">GET /models</span> straight away, so a wrong value fails here and not later.</span>
+        </div>
+
+        <div style="display: flex; gap: 8px; background: #eef0f4; border-radius: 10px; padding: 10px 12px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b6377" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          <span style="font-size: 12px; color: #5b6377; line-height: 1.5; text-wrap: pretty">
+            The token is stored locally in this browser only. It is never synchronised and never sent
+            anywhere except api.infomaniak.com. Browser extension storage is not encrypted at rest —
+            scope the token to <span style="font-family: ui-monospace, Menlo, monospace">ai-tools</span> and give it an expiry.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-h">
+        Models
+        <span style="height: 26px; padding: 0 8px; border-radius: 6px; font-size: 11px; font-weight: 500; display: inline-flex; align-items: center; color: #5b6377">Refresh</span>
+      </div>
+      <div style="padding: 16px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 12px; align-items: center">
+          <div><div style="font-size: 12px; font-weight: 500">Quick tasks</div><div style="font-size: 12px; color: #868ea3">inline rewriting</div></div>
+          <div class="input" style="justify-content: space-between; color: #868ea3"><span style="font-family: ui-monospace, Menlo, monospace; color: #12151f">— loaded from your product —</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#868ea3" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div><div style="font-size: 12px; font-weight: 500">Standard tasks</div><div style="font-size: 12px; color: #868ea3">pages, summaries</div></div>
+          <div class="input" style="justify-content: space-between"><span style="font-family: ui-monospace, Menlo, monospace">— loaded from your product —</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#868ea3" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div><div style="font-size: 12px; font-weight: 500">Deep tasks</div><div style="font-size: 12px; color: #868ea3">conversation</div></div>
+          <div class="input" style="justify-content: space-between"><span style="font-family: ui-monospace, Menlo, monospace">— loaded from your product —</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#868ea3" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></div>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #5b6377; text-wrap: pretty">
+          No model name is hardcoded anywhere in the extension. Tasks ask for a tier; the tier maps to
+          whatever your AI product actually exposes.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
