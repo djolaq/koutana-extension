@@ -1,19 +1,19 @@
 {
-  "extName": { "message": "PageLingua" },
+  "extName": { "message": "Kounata" },
   "extDescription": {
     "message": "Traduci, riscrivi e interroga qualsiasi pagina — con il tuo account Infomaniak AI."
   },
 
-  "cmdOpenSidePanel": { "message": "Apri il pannello PageLingua" },
+  "cmdOpenSidePanel": { "message": "Apri il pannello Kounata" },
   "cmdTranslateSelection": { "message": "Traduci la selezione" },
 
-  "ctxTranslateSelection": { "message": "Traduci con PageLingua" },
-  "ctxSummarizePage": { "message": "Riassumi questa pagina con PageLingua" },
-  "ctxAskAboutPage": { "message": "Chiedi a PageLingua di questa pagina" },
+  "ctxTranslateSelection": { "message": "Traduci con Kounata" },
+  "ctxSummarizePage": { "message": "Riassumi questa pagina con Kounata" },
+  "ctxAskAboutPage": { "message": "Chiedi a Kounata di questa pagina" },
 
   "settings": { "message": "Impostazioni" },
   "openSettings": { "message": "Apri le impostazioni" },
-  "settingsTitle": { "message": "Impostazioni di PageLingua" },
+  "settingsTitle": { "message": "Impostazioni di Kounata" },
   "close": { "message": "Chiudi" },
   "copy": { "message": "Copia" },
   "send": { "message": "Invia" },
@@ -21,7 +21,7 @@
 
   "notConnectedTitle": { "message": "Nessun account collegato" },
   "notConnectedBody": {
-    "message": "PageLingua usa i tuoi crediti Infomaniak AI. Collega il tuo account per iniziare."
+    "message": "Kounata usa i tuoi crediti Infomaniak AI. Collega il tuo account per iniziare."
   },
   "connectAccount": { "message": "Collega il mio account" },
   "connectedTitle": { "message": "Account collegato" },

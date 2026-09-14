@@ -10,7 +10,7 @@ export function Card({
   children: ReactNode;
 }) {
   return (
-    <section className="rounded-lg border border-line bg-surface shadow-[var(--pl-shadow-sm)]">
+    <section className="rounded-lg border border-line bg-surface shadow-[var(--kn-shadow-sm)]">
       {(title || action) && (
         <header className="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
           {title && <h2 className="text-lg font-semibold text-fg">{title}</h2>}

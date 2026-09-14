@@ -1,6 +1,6 @@
 <div align="center">
 
-# PageLingua
+# Kounata
 
 **Translate, rewrite and ask questions about any page — on your own Infomaniak AI account.**
 
@@ -10,7 +10,7 @@ Chrome · Edge · Brave · Opera · Firefox
 
 ---
 
-PageLingua puts [Infomaniak AI Tools](https://www.infomaniak.com/en/hosting/ai-services)
+Kounata puts [Infomaniak AI Tools](https://www.infomaniak.com/en/hosting/ai-services)
 into the browser. It uses **your** Infomaniak account and **your** AI credits:
 there is no backend, no shared API key, and no account to create with us. Page
 content goes to your own AI product in Switzerland, and nowhere else.
@@ -33,7 +33,7 @@ Italian today) and your light/dark preference.
 1. In the [Infomaniak Manager](https://manager.infomaniak.com/v3/ng/products/cloud/ai-tools),
    open **AI Tools** and note your product ID.
 2. In your profile, create an **API token** with the `ai-tools` scope.
-3. Install PageLingua, open its settings, paste both, and press **Connect and verify**.
+3. Install Kounata, open its settings, paste both, and press **Connect and verify**.
 
 New Infomaniak accounts include a million free credits, and you can set a spending
 cap in the Manager.
@@ -78,10 +78,12 @@ See [`SECURITY.md`](SECURITY.md).
 
 ## Name
 
-PageLingua is an independent project and is **not affiliated with or endorsed by
+Kounata is an independent project and is **not affiliated with or endorsed by
 Infomaniak** — it simply lets you use the Infomaniak AI account you already pay
-for. See [`docs/adr/0005-naming.md`](docs/adr/0005-naming.md) for how the name was
-chosen and checked.
+for. The name is a coined word, so the tagline does the explaining:
+*translate, rewrite and ask questions about any page, on your own AI account*.
+Keep it next to the name everywhere. See
+[`docs/adr/0005-naming.md`](docs/adr/0005-naming.md).
 
 ## Licence
 

@@ -37,7 +37,7 @@ Errors are values: `{ ok: false, code, message }`. The UI maps `code` to an
 ### Streaming (`stream`)
 
 ```
-UI ──runtime.connect('pagelingua/stream')──► background.onConnect
+UI ──runtime.connect('kounata/stream')──► background.onConnect
 UI ──postMessage(StreamRequest)─────►   run()
                                           ├─ settings + resolved target language
                                           ├─ TASKS[kind].build(input, ctx)  → messages

@@ -38,11 +38,11 @@ export default defineContentScript({
     let pageSegments: Segment[] = [];
 
     const ui = await createShadowRootUi(ctx, {
-      name: 'pagelingua-overlay',
+      name: 'kounata-overlay',
       position: 'overlay',
       anchor: 'body',
       onMount(container) {
-        container.setAttribute('data-pagelingua-ui', '');
+        container.setAttribute('data-kounata-ui', '');
         root = createRoot(container);
         const update = (state: OverlayState) =>
           root?.render(<Overlay state={state} onClose={() => update({ kind: 'idle' })} />);

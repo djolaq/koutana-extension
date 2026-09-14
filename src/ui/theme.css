@@ -3,74 +3,74 @@
 
 /**
  * Bridges the design tokens into Tailwind v4 utilities so components can write
- * `bg-surface text-muted rounded-md` instead of inline `var(--pl-*)`.
+ * `bg-surface text-muted rounded-md` instead of inline `var(--kn-*)`.
  * Tailwind v4 is CSS-first: this @theme block IS the Tailwind config.
  */
 @theme inline {
-  --color-bg: var(--pl-bg);
-  --color-surface: var(--pl-surface);
-  --color-sunken: var(--pl-surface-sunken);
-  --color-hover: var(--pl-surface-hover);
+  --color-bg: var(--kn-bg);
+  --color-surface: var(--kn-surface);
+  --color-sunken: var(--kn-surface-sunken);
+  --color-hover: var(--kn-surface-hover);
 
-  --color-fg: var(--pl-text);
-  --color-muted: var(--pl-text-muted);
-  --color-subtle: var(--pl-text-subtle);
-  --color-on-primary: var(--pl-text-on-primary);
+  --color-fg: var(--kn-text);
+  --color-muted: var(--kn-text-muted);
+  --color-subtle: var(--kn-text-subtle);
+  --color-on-primary: var(--kn-text-on-primary);
 
-  --color-line: var(--pl-border);
-  --color-line-strong: var(--pl-border-strong);
+  --color-line: var(--kn-border);
+  --color-line-strong: var(--kn-border-strong);
 
-  --color-primary: var(--pl-primary);
-  --color-primary-hover: var(--pl-primary-hover);
-  --color-primary-soft: var(--pl-primary-soft);
+  --color-primary: var(--kn-primary);
+  --color-primary-hover: var(--kn-primary-hover);
+  --color-primary-soft: var(--kn-primary-soft);
 
-  --color-success: var(--pl-success);
-  --color-success-soft: var(--pl-success-soft);
-  --color-warning: var(--pl-warning);
-  --color-warning-soft: var(--pl-warning-soft);
-  --color-danger: var(--pl-danger);
-  --color-danger-soft: var(--pl-danger-soft);
+  --color-success: var(--kn-success);
+  --color-success-soft: var(--kn-success-soft);
+  --color-warning: var(--kn-warning);
+  --color-warning-soft: var(--kn-warning-soft);
+  --color-danger: var(--kn-danger);
+  --color-danger-soft: var(--kn-danger-soft);
 
-  --font-sans: var(--pl-font);
-  --font-mono: var(--pl-font-mono);
+  --font-sans: var(--kn-font);
+  --font-mono: var(--kn-font-mono);
 
-  --text-xs: var(--pl-text-xs);
-  --text-sm: var(--pl-text-sm);
-  --text-base: var(--pl-text-base);
-  --text-md: var(--pl-text-md);
-  --text-lg: var(--pl-text-lg);
-  --text-xl: var(--pl-text-xl);
+  --text-xs: var(--kn-text-xs);
+  --text-sm: var(--kn-text-sm);
+  --text-base: var(--kn-text-base);
+  --text-md: var(--kn-text-md);
+  --text-lg: var(--kn-text-lg);
+  --text-xl: var(--kn-text-xl);
 
-  --radius-sm: var(--pl-radius-sm);
-  --radius-md: var(--pl-radius-md);
-  --radius-lg: var(--pl-radius-lg);
+  --radius-sm: var(--kn-radius-sm);
+  --radius-md: var(--kn-radius-md);
+  --radius-lg: var(--kn-radius-lg);
 
-  --shadow-sm: var(--pl-shadow-sm);
-  --shadow-md: var(--pl-shadow-md);
-  --shadow-lg: var(--pl-shadow-lg);
+  --shadow-sm: var(--kn-shadow-sm);
+  --shadow-md: var(--kn-shadow-md);
+  --shadow-lg: var(--kn-shadow-lg);
 }
 
 @layer base {
   html,
   body {
     margin: 0;
-    background: var(--pl-bg);
-    color: var(--pl-text);
-    font-family: var(--pl-font);
-    font-size: var(--pl-text-base);
-    line-height: var(--pl-leading-normal);
+    background: var(--kn-bg);
+    color: var(--kn-text);
+    font-family: var(--kn-font);
+    font-size: var(--kn-text-base);
+    line-height: var(--kn-leading-normal);
     -webkit-font-smoothing: antialiased;
   }
 
   /* One visible focus style everywhere, keyboard-only. */
   :focus-visible {
-    outline: 2px solid var(--pl-focus-ring);
+    outline: 2px solid var(--kn-focus-ring);
     outline-offset: 2px;
-    border-radius: var(--pl-radius-sm);
+    border-radius: var(--kn-radius-sm);
   }
 
   ::selection {
-    background: var(--pl-primary-soft);
-    color: var(--pl-text);
+    background: var(--kn-primary-soft);
+    color: var(--kn-text);
   }
 }

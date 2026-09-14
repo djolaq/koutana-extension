@@ -1,75 +1,69 @@
-# ADR 0005 — The product is called PageLingua
+# ADR 0005 — The product is called Kounata
 
-Date: 2026-09-14 · Status: accepted · Supersedes the working name "Sova"
+Date: 2026-09-14 · Status: accepted · Supersedes the working names "Sova" and "PageLingua"
 
 ## Context
 
-The name has to do four things at once:
+The name had to clear four bars: carry no Infomaniak trademark (the extension runs
+on the user's Infomaniak account but is an independent project, and both stores
+reject names implying an affiliation that does not exist); work across the five
+locales we ship; be distinctive enough to register as a mark; and come with a
+domain that is genuinely available.
 
-1. **Say what the extension does** on sight, in a store listing full of competitors.
-2. **Carry no Infomaniak trademark.** The extension runs on the user's Infomaniak
-   account, but it is an independent project. Putting "Infomaniak" in the product
-   name is trademark use, and both stores reject names that imply an affiliation
-   that does not exist. Nominative use in the description is fine and is what we do.
-3. **Work in every locale we ship.** The UI follows the browser language across
-   English, French, German, Spanish and Italian.
-4. **Have a domain that is actually free**, so the listing, the docs and the
-   support address can share one name.
+Two earlier directions were dropped. "Sova" said nothing about the product.
+Descriptive compounds in the language/AI/tool space — `pagelingo`, `lingoside`,
+`aidkit`, `toolbuddy`, `aitoolbelt`, `aidmate`, `handyaid` and some twenty others —
+are a exhausted market in `.com`: nearly all were registered between 1997 and 2025
+or now sit with resellers. What survived (`assistbench`, `aidbench`, `assistbelt`)
+was available but flat.
 
 ## Decision
 
-**PageLingua.** *Page* is the object the extension acts on; *lingua* reads as
-language in English, French, Italian, Spanish and Portuguese without translation,
-and is transparent enough in German. Together they say "languages, on pages"
-before the reader gets to the tagline.
+**Kounata**, on `kounata.com`. Chosen by the project owner.
 
-Tagline: *Translate, rewrite and ask questions about any page — on your own AI account.*
-
-It is suggestive rather than generic, so it is registrable as a mark, unlike
-"Page Translator".
+It is a coined word with no meaning in any of our target languages. That is a
+deliberate trade: maximum distinctiveness and availability, zero built-in
+description.
 
 ## Verification, 2026-09-14
 
-Availability was checked against the **registries' own RDAP services** — the
-protocol that replaced port-43 whois, and the authoritative source for each TLD:
+Checked against the registries' own RDAP services — the protocol that replaced
+port-43 whois, and the authoritative source for each TLD. Under RFC 7480 a 404
+from a registry's RDAP service means the registry holds no object for that name,
+which is what a whois "No match" reports.
 
 | Domain | RDAP server | Result |
 | --- | --- | --- |
-| `pagelingua.com` | `rdap.verisign.com` (.com registry) | HTTP 404 — **free** |
-| `pagelingua.app` | `www.registry.google` (.app registry) | HTTP 404 — **free** |
-| `pagelingua.fr` | `rdap.nic.fr` (AFNIC) | HTTP 404 — **free** |
+| `kounata.com` | `rdap.verisign.com` (.com registry) | HTTP 404 — **free** |
+| `kounata.fr` | `rdap.nic.fr` (AFNIC) | HTTP 404 — **free** |
 
-Under RFC 7480 a 404 from a registry's RDAP service means the registry holds no
-object for that name, which is the same answer a whois "No match" gives.
+Web search found no company, product or extension named Kounata.
 
-Web search found no product, company or browser extension using the name.
-
-Rejected along the way, all registered at the time of checking: `pagelingo.com`,
-`lingopage.com`, `lingoside.com`, `pagefluent.com`, `fluentpage.com`,
-`lingualens.com`, `lingoscope.com`, `translateanywhere.com`, `sidepage.com`,
-`linguapage.com`, `openlingua.com`, `askthispage.com`.
-
-Also free but rejected on merit: `pagelinguist.com` and `browserlinguist.com`
-(clear but stiff, and long in a store title); `pagepolyglot.com` (the Chrome Web
-Store already carries several extensions named *Polyglot* — a crowded field is a
-discoverability problem before it is a legal one); `readwriteask.com`
-(uncomfortably close to Texthelp's **Read&Write**, itself a browser extension).
+**One adjacency worth knowing:** *Kounta* — one letter shorter — is an Australian
+point-of-sale product acquired by Lightspeed. Different sector, different goods and
+services, so not a conflict in trademark terms, but expect search engines to
+suggest "Kounta" for a while. Worth accounting for in the store listing copy and in
+whatever landing page goes on `kounata.com`.
 
 ## What is NOT verified
 
-**Trademark registers were not searched.** Domain availability and an absence of
-search results are not a trademark clearance. Before any paid branding, before the
-first store listing, search EUIPO (EU), INPI (France) and USPTO (US) for
-*PageLingua* and for *Lingua* in class 9 / class 42, or have a professional do it.
-Tracked as an issue.
+**Trademark registers were not searched.** Domain availability and an empty search
+result are not a clearance. Before paid branding and before the first store
+listing, search EUIPO (EU), INPI (France) and USPTO (US) for *Kounata* and for
+*Kounta* in class 9 and class 42, or have a professional do it. Tracked as an issue.
 
 ## Consequences
 
-- Package `pagelingua-extension`, Firefox gecko id `pagelingua@laqua.fr`, design
-  token prefix `--pl-`, stream port `pagelingua/stream`, Shadow DOM host
-  `pagelingua-overlay`.
-- **The gecko id is frozen at the first AMO submission** — changing it afterwards
-  orphans every existing install. Rename now or never.
-- The icon changed with the name: the owl belonged to "Sova". The mark is now two
-  offset pages — the same page in another language — which stays legible at 16 px.
-- Register the three domains before announcing anything anywhere.
+- Package `kounata-extension`, Firefox gecko id `kounata@laqua.fr`, design token
+  prefix `--kn-`, stream port `kounata/stream`, Shadow DOM host `kounata-overlay`.
+- **The gecko id freezes at the first AMO submission** — changing it afterwards
+  orphans every existing Firefox install. This is the last free moment to rename.
+- **A coined name explains nothing, so everything else has to.** The store title,
+  the one-line description, the first screenshot and the icon now carry the whole
+  burden of telling a stranger what this does. Treat the subtitle
+  — *Translate, rewrite and ask questions about any page, on your own AI account* —
+  as part of the product, not as marketing filler, and keep it in every locale.
+  Store search also works on the description, so the feature words (translate,
+  rewrite, summarise) must appear there; the name contributes nothing to
+  discoverability.
+- Register `kounata.com` and `kounata.fr` before the repository goes public.

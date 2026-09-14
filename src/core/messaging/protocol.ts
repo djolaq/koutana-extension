@@ -34,7 +34,7 @@ export type Response =
   | { ok: true; type: 'void' }
   | { ok: false; code: AiErrorCode; message: string };
 
-export const STREAM_PORT = 'pagelingua/stream';
+export const STREAM_PORT = 'kounata/stream';
 
 export type StreamRequest =
   | { kind: 'translate'; text: string }

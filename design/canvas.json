@@ -34,7 +34,7 @@
       "x": 0,
       "y": -180,
       "w": 520,
-      "text": "PageLingua — design system + v1 screens.\nValues lifted from src/ui/tokens/tokens.css, hue 232, 13px body.\nStatic mockups: the built extension is the interactive version."
+      "text": "Kounata — design system + v1 screens.\nValues lifted from src/ui/tokens/tokens.css, hue 232, 13px body.\nStatic mockups: the built extension is the interactive version."
     },
     {
       "id": "shadow-dom",

@@ -34,7 +34,7 @@ export function collectSegments(root: Node = document.body, minLength = 2): Segm
       const parent = (node as Text).parentElement;
       if (!parent) return NodeFilter.FILTER_REJECT;
       if (SKIP_TAGS.has(parent.tagName)) return NodeFilter.FILTER_REJECT;
-      if (parent.closest('[data-pagelingua-ui]')) return NodeFilter.FILTER_REJECT;
+      if (parent.closest('[data-kounata-ui]')) return NodeFilter.FILTER_REJECT;
       if (parent.isContentEditable) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     },

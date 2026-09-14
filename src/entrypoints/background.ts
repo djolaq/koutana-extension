@@ -32,17 +32,17 @@ export default defineBackground(() => {
   browser.runtime.onInstalled.addListener(async () => {
     await browser.contextMenus.removeAll();
     browser.contextMenus.create({
-      id: 'pagelingua.translateSelection',
+      id: 'kounata.translateSelection',
       title: t('ctxTranslateSelection'),
       contexts: ['selection'],
     });
     browser.contextMenus.create({
-      id: 'pagelingua.summarizePage',
+      id: 'kounata.summarizePage',
       title: t('ctxSummarizePage'),
       contexts: ['page'],
     });
     browser.contextMenus.create({
-      id: 'pagelingua.askAboutPage',
+      id: 'kounata.askAboutPage',
       title: t('ctxAskAboutPage'),
       contexts: ['page', 'selection'],
     });
@@ -51,14 +51,14 @@ export default defineBackground(() => {
   browser.contextMenus.onClicked.addListener(async (info, tab) => {
     if (!tab?.id) return;
     switch (info.menuItemId) {
-      case 'pagelingua.translateSelection':
+      case 'kounata.translateSelection':
         await browser.tabs.sendMessage(tab.id, {
           type: 'overlay/translate',
           text: info.selectionText ?? '',
         });
         break;
-      case 'pagelingua.summarizePage':
-      case 'pagelingua.askAboutPage':
+      case 'kounata.summarizePage':
+      case 'kounata.askAboutPage':
         await openSidePanel(tab.id);
         break;
     }

@@ -14,7 +14,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const base =
   'inline-flex items-center justify-center gap-1.5 font-medium whitespace-nowrap ' +
-  'transition-colors duration-[var(--pl-duration-fast)] ' +
+  'transition-colors duration-[var(--kn-duration-fast)] ' +
   'disabled:opacity-50 disabled:pointer-events-none select-none';
 
 const variants: Record<ButtonVariant, string> = {
@@ -25,8 +25,8 @@ const variants: Record<ButtonVariant, string> = {
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: 'h-[var(--pl-control-height-sm)] px-2 text-xs rounded-sm',
-  md: 'h-[var(--pl-control-height)] px-3 text-base rounded-md',
+  sm: 'h-[var(--kn-control-height-sm)] px-2 text-xs rounded-sm',
+  md: 'h-[var(--kn-control-height)] px-3 text-base rounded-md',
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(

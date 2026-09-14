@@ -81,7 +81,7 @@ export function App() {
               className={
                 turn.role === 'user'
                   ? 'self-end max-w-[90%] rounded-lg rounded-br-sm bg-primary px-3 py-2 text-md text-on-primary'
-                  : 'max-w-full rounded-lg border border-line bg-surface px-3 py-2 text-md whitespace-pre-wrap leading-[var(--pl-leading-prose)]'
+                  : 'max-w-full rounded-lg border border-line bg-surface px-3 py-2 text-md whitespace-pre-wrap leading-[var(--kn-leading-prose)]'
               }
             >
               {turn.content}
@@ -104,7 +104,7 @@ export function App() {
         }}
       >
         <textarea
-          className="min-h-[var(--pl-control-height)] max-h-40 flex-1 resize-none rounded-md border border-line bg-surface px-2.5 py-1.5 text-md text-fg placeholder:text-subtle"
+          className="min-h-[var(--kn-control-height)] max-h-40 flex-1 resize-none rounded-md border border-line bg-surface px-2.5 py-1.5 text-md text-fg placeholder:text-subtle"
           rows={1}
           value={input}
           placeholder={t('askPlaceholder')}

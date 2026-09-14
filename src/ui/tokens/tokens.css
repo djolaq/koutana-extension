@@ -1,5 +1,5 @@
 /**
- * PageLingua design tokens — the single source of truth for every colour, radius,
+ * Kounata design tokens — the single source of truth for every colour, radius,
  * space and duration in the extension.
  *
  * Rules:
@@ -16,170 +16,170 @@
 :root,
 :host {
   /* — Brand ------------------------------------------------------------- */
-  --pl-hue: 232;
+  --kn-hue: 232;
 
   /* — Surfaces ---------------------------------------------------------- */
-  --pl-bg: #f7f8fa;
-  --pl-surface: #ffffff;
-  --pl-surface-sunken: #eef0f4;
-  --pl-surface-hover: #f2f4f8;
-  --pl-overlay-scrim: rgb(15 18 28 / 0.32);
+  --kn-bg: #f7f8fa;
+  --kn-surface: #ffffff;
+  --kn-surface-sunken: #eef0f4;
+  --kn-surface-hover: #f2f4f8;
+  --kn-overlay-scrim: rgb(15 18 28 / 0.32);
 
   /* — Text -------------------------------------------------------------- */
-  --pl-text: #12151f;
-  --pl-text-muted: #5b6377;
-  --pl-text-subtle: #868ea3;
-  --pl-text-on-primary: #ffffff;
+  --kn-text: #12151f;
+  --kn-text-muted: #5b6377;
+  --kn-text-subtle: #868ea3;
+  --kn-text-on-primary: #ffffff;
 
   /* — Lines ------------------------------------------------------------- */
-  --pl-border: #dfe3eb;
-  --pl-border-strong: #c3c9d6;
-  --pl-focus-ring: hsl(var(--pl-hue) 90% 58%);
+  --kn-border: #dfe3eb;
+  --kn-border-strong: #c3c9d6;
+  --kn-focus-ring: hsl(var(--kn-hue) 90% 58%);
 
   /* — Accents ----------------------------------------------------------- */
-  --pl-primary: hsl(var(--pl-hue) 78% 54%);
-  --pl-primary-hover: hsl(var(--pl-hue) 78% 47%);
-  --pl-primary-soft: hsl(var(--pl-hue) 90% 96%);
-  --pl-primary-soft-border: hsl(var(--pl-hue) 70% 88%);
+  --kn-primary: hsl(var(--kn-hue) 78% 54%);
+  --kn-primary-hover: hsl(var(--kn-hue) 78% 47%);
+  --kn-primary-soft: hsl(var(--kn-hue) 90% 96%);
+  --kn-primary-soft-border: hsl(var(--kn-hue) 70% 88%);
 
-  --pl-success: #157f4d;
-  --pl-success-soft: #e7f6ee;
-  --pl-warning: #9a6200;
-  --pl-warning-soft: #fdf3e2;
-  --pl-danger: #b3261e;
-  --pl-danger-soft: #fdeceb;
+  --kn-success: #157f4d;
+  --kn-success-soft: #e7f6ee;
+  --kn-warning: #9a6200;
+  --kn-warning-soft: #fdf3e2;
+  --kn-danger: #b3261e;
+  --kn-danger-soft: #fdeceb;
 
   /* — Typography -------------------------------------------------------- */
-  --pl-font:
+  --kn-font:
     ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --pl-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  --kn-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
-  --pl-text-xs: 0.6875rem; /* 11px — badges, counters */
-  --pl-text-sm: 0.75rem; /* 12px — helper text */
-  --pl-text-base: 0.8125rem; /* 13px — extension body copy */
-  --pl-text-md: 0.875rem; /* 14px — side-panel prose */
-  --pl-text-lg: 1rem; /* 16px — section titles */
-  --pl-text-xl: 1.25rem; /* 20px — page titles */
+  --kn-text-xs: 0.6875rem; /* 11px — badges, counters */
+  --kn-text-sm: 0.75rem; /* 12px — helper text */
+  --kn-text-base: 0.8125rem; /* 13px — extension body copy */
+  --kn-text-md: 0.875rem; /* 14px — side-panel prose */
+  --kn-text-lg: 1rem; /* 16px — section titles */
+  --kn-text-xl: 1.25rem; /* 20px — page titles */
 
-  --pl-leading-tight: 1.25;
-  --pl-leading-normal: 1.5;
-  --pl-leading-prose: 1.65;
+  --kn-leading-tight: 1.25;
+  --kn-leading-normal: 1.5;
+  --kn-leading-prose: 1.65;
 
-  --pl-weight-normal: 400;
-  --pl-weight-medium: 500;
-  --pl-weight-semibold: 600;
+  --kn-weight-normal: 400;
+  --kn-weight-medium: 500;
+  --kn-weight-semibold: 600;
 
   /* — Space (4px base) -------------------------------------------------- */
-  --pl-space-1: 0.25rem;
-  --pl-space-2: 0.5rem;
-  --pl-space-3: 0.75rem;
-  --pl-space-4: 1rem;
-  --pl-space-5: 1.5rem;
-  --pl-space-6: 2rem;
-  --pl-space-7: 3rem;
+  --kn-space-1: 0.25rem;
+  --kn-space-2: 0.5rem;
+  --kn-space-3: 0.75rem;
+  --kn-space-4: 1rem;
+  --kn-space-5: 1.5rem;
+  --kn-space-6: 2rem;
+  --kn-space-7: 3rem;
 
   /* — Radii ------------------------------------------------------------- */
-  --pl-radius-sm: 6px;
-  --pl-radius-md: 10px;
-  --pl-radius-lg: 14px;
-  --pl-radius-full: 9999px;
+  --kn-radius-sm: 6px;
+  --kn-radius-md: 10px;
+  --kn-radius-lg: 14px;
+  --kn-radius-full: 9999px;
 
   /* — Elevation --------------------------------------------------------- */
-  --pl-shadow-sm: 0 1px 2px rgb(15 18 28 / 0.06), 0 1px 1px rgb(15 18 28 / 0.04);
-  --pl-shadow-md: 0 4px 12px rgb(15 18 28 / 0.08), 0 1px 3px rgb(15 18 28 / 0.06);
-  --pl-shadow-lg: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08);
+  --kn-shadow-sm: 0 1px 2px rgb(15 18 28 / 0.06), 0 1px 1px rgb(15 18 28 / 0.04);
+  --kn-shadow-md: 0 4px 12px rgb(15 18 28 / 0.08), 0 1px 3px rgb(15 18 28 / 0.06);
+  --kn-shadow-lg: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08);
 
   /* — Motion ------------------------------------------------------------ */
-  --pl-duration-fast: 120ms;
-  --pl-duration-base: 200ms;
-  --pl-duration-slow: 320ms;
-  --pl-ease: cubic-bezier(0.2, 0, 0, 1);
+  --kn-duration-fast: 120ms;
+  --kn-duration-base: 200ms;
+  --kn-duration-slow: 320ms;
+  --kn-ease: cubic-bezier(0.2, 0, 0, 1);
 
   /* — Layering (content-script overlays only) --------------------------- */
-  --pl-z-handle: 2147483000;
-  --pl-z-popover: 2147483200;
-  --pl-z-scrim: 2147483400;
+  --kn-z-handle: 2147483000;
+  --kn-z-popover: 2147483200;
+  --kn-z-scrim: 2147483400;
 
   /* — Component sizing -------------------------------------------------- */
-  --pl-control-height: 32px;
-  --pl-control-height-sm: 26px;
-  --pl-popup-width: 360px;
-  --pl-tap-target: 32px; /* desktop-only surfaces; 44px on touch */
+  --kn-control-height: 32px;
+  --kn-control-height-sm: 26px;
+  --kn-popup-width: 360px;
+  --kn-tap-target: 32px; /* desktop-only surfaces; 44px on touch */
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']),
   :host(:not([data-theme='light'])) {
-    --pl-bg: #0e1017;
-    --pl-surface: #171a23;
-    --pl-surface-sunken: #10131b;
-    --pl-surface-hover: #1e222d;
-    --pl-overlay-scrim: rgb(0 0 0 / 0.5);
+    --kn-bg: #0e1017;
+    --kn-surface: #171a23;
+    --kn-surface-sunken: #10131b;
+    --kn-surface-hover: #1e222d;
+    --kn-overlay-scrim: rgb(0 0 0 / 0.5);
 
-    --pl-text: #eef0f6;
-    --pl-text-muted: #a3abbe;
-    --pl-text-subtle: #767f94;
+    --kn-text: #eef0f6;
+    --kn-text-muted: #a3abbe;
+    --kn-text-subtle: #767f94;
 
-    --pl-border: #272c39;
-    --pl-border-strong: #3a4152;
+    --kn-border: #272c39;
+    --kn-border-strong: #3a4152;
 
-    --pl-primary: hsl(var(--pl-hue) 85% 68%);
-    --pl-primary-hover: hsl(var(--pl-hue) 85% 74%);
-    --pl-primary-soft: hsl(var(--pl-hue) 40% 18%);
-    --pl-primary-soft-border: hsl(var(--pl-hue) 35% 28%);
-    --pl-text-on-primary: #0b0e15;
+    --kn-primary: hsl(var(--kn-hue) 85% 68%);
+    --kn-primary-hover: hsl(var(--kn-hue) 85% 74%);
+    --kn-primary-soft: hsl(var(--kn-hue) 40% 18%);
+    --kn-primary-soft-border: hsl(var(--kn-hue) 35% 28%);
+    --kn-text-on-primary: #0b0e15;
 
-    --pl-success: #5bd39a;
-    --pl-success-soft: #10261d;
-    --pl-warning: #ecb45c;
-    --pl-warning-soft: #2a2113;
-    --pl-danger: #f28b84;
-    --pl-danger-soft: #2c1615;
+    --kn-success: #5bd39a;
+    --kn-success-soft: #10261d;
+    --kn-warning: #ecb45c;
+    --kn-warning-soft: #2a2113;
+    --kn-danger: #f28b84;
+    --kn-danger-soft: #2c1615;
 
-    --pl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-    --pl-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
-    --pl-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+    --kn-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --kn-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+    --kn-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
   }
 }
 
 :root[data-theme='dark'],
 :host([data-theme='dark']) {
-  --pl-bg: #0e1017;
-  --pl-surface: #171a23;
-  --pl-surface-sunken: #10131b;
-  --pl-surface-hover: #1e222d;
-  --pl-overlay-scrim: rgb(0 0 0 / 0.5);
+  --kn-bg: #0e1017;
+  --kn-surface: #171a23;
+  --kn-surface-sunken: #10131b;
+  --kn-surface-hover: #1e222d;
+  --kn-overlay-scrim: rgb(0 0 0 / 0.5);
 
-  --pl-text: #eef0f6;
-  --pl-text-muted: #a3abbe;
-  --pl-text-subtle: #767f94;
+  --kn-text: #eef0f6;
+  --kn-text-muted: #a3abbe;
+  --kn-text-subtle: #767f94;
 
-  --pl-border: #272c39;
-  --pl-border-strong: #3a4152;
+  --kn-border: #272c39;
+  --kn-border-strong: #3a4152;
 
-  --pl-primary: hsl(var(--pl-hue) 85% 68%);
-  --pl-primary-hover: hsl(var(--pl-hue) 85% 74%);
-  --pl-primary-soft: hsl(var(--pl-hue) 40% 18%);
-  --pl-primary-soft-border: hsl(var(--pl-hue) 35% 28%);
-  --pl-text-on-primary: #0b0e15;
+  --kn-primary: hsl(var(--kn-hue) 85% 68%);
+  --kn-primary-hover: hsl(var(--kn-hue) 85% 74%);
+  --kn-primary-soft: hsl(var(--kn-hue) 40% 18%);
+  --kn-primary-soft-border: hsl(var(--kn-hue) 35% 28%);
+  --kn-text-on-primary: #0b0e15;
 
-  --pl-success: #5bd39a;
-  --pl-success-soft: #10261d;
-  --pl-warning: #ecb45c;
-  --pl-warning-soft: #2a2113;
-  --pl-danger: #f28b84;
-  --pl-danger-soft: #2c1615;
+  --kn-success: #5bd39a;
+  --kn-success-soft: #10261d;
+  --kn-warning: #ecb45c;
+  --kn-warning-soft: #2a2113;
+  --kn-danger: #f28b84;
+  --kn-danger-soft: #2c1615;
 
-  --pl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --pl-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
-  --pl-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+  --kn-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --kn-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+  --kn-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {
   :root,
   :host {
-    --pl-duration-fast: 1ms;
-    --pl-duration-base: 1ms;
-    --pl-duration-slow: 1ms;
+    --kn-duration-fast: 1ms;
+    --kn-duration-base: 1ms;
+    --kn-duration-slow: 1ms;
   }
 }
