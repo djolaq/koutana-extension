@@ -8,7 +8,7 @@ Do not open a public issue. Expect an acknowledgement within a week.
 
 ## Threat model
 
-Sova stores a credential that can spend money on the user's Infomaniak account, and
+PageLingua stores a credential that can spend money on the user's Infomaniak account, and
 runs code on every page the user visits. The design follows from those two facts.
 
 | Threat                                          | Mitigation                                                                                                                                                                                                             |

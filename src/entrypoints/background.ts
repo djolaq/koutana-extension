@@ -32,17 +32,17 @@ export default defineBackground(() => {
   browser.runtime.onInstalled.addListener(async () => {
     await browser.contextMenus.removeAll();
     browser.contextMenus.create({
-      id: 'sova.translateSelection',
+      id: 'pagelingua.translateSelection',
       title: t('ctxTranslateSelection'),
       contexts: ['selection'],
     });
     browser.contextMenus.create({
-      id: 'sova.summarizePage',
+      id: 'pagelingua.summarizePage',
       title: t('ctxSummarizePage'),
       contexts: ['page'],
     });
     browser.contextMenus.create({
-      id: 'sova.askAboutPage',
+      id: 'pagelingua.askAboutPage',
       title: t('ctxAskAboutPage'),
       contexts: ['page', 'selection'],
     });
@@ -51,14 +51,14 @@ export default defineBackground(() => {
   browser.contextMenus.onClicked.addListener(async (info, tab) => {
     if (!tab?.id) return;
     switch (info.menuItemId) {
-      case 'sova.translateSelection':
+      case 'pagelingua.translateSelection':
         await browser.tabs.sendMessage(tab.id, {
           type: 'overlay/translate',
           text: info.selectionText ?? '',
         });
         break;
-      case 'sova.summarizePage':
-      case 'sova.askAboutPage':
+      case 'pagelingua.summarizePage':
+      case 'pagelingua.askAboutPage':
         await openSidePanel(tab.id);
         break;
     }

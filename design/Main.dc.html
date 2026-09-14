@@ -1,161 +1,514 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-  <style>
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-    a { color: #2e47e5; } a:hover { color: #1a33d5; }
-    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
-  </style>
-</helmet>
+  <head>
+    <meta charset="utf-8" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <style>
+          body {
+            margin: 0;
+            font-family:
+              ui-sans-serif,
+              system-ui,
+              -apple-system,
+              'Segoe UI',
+              Roboto,
+              sans-serif;
+          }
+          a {
+            color: #2e47e5;
+          }
+          a:hover {
+            color: #1a33d5;
+          }
+          .lbl {
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #868ea3;
+          }
+          .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 11px;
+          }
+        </style>
+      </helmet>
 
-<div style="padding: 40px; background: #f7f8fa; color: #12151f; min-height: 100%; box-sizing: border-box">
+      <div
+        style="
+          padding: 40px;
+          background: #f7f8fa;
+          color: #12151f;
+          min-height: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px">
+          <h1 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">
+            PageLingua — design tokens
+          </h1>
+          <span class="mono" style="color: #868ea3">src/ui/tokens/tokens.css</span>
+        </div>
+        <p
+          style="
+            margin: 0 0 32px;
+            font-size: 14px;
+            color: #5b6377;
+            max-width: 62ch;
+            text-wrap: pretty;
+          "
+        >
+          Every value below is a CSS custom property. Components reference the token, never the
+          literal. The whole accent ramp derives from one hue variable,
+          <span class="mono">--pl-hue: 232</span>.
+        </p>
 
-  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px">
-    <h1 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Sova — design tokens</h1>
-    <span class="mono" style="color: #868ea3">src/ui/tokens/tokens.css</span>
-  </div>
-  <p style="margin: 0 0 32px; font-size: 14px; color: #5b6377; max-width: 62ch; text-wrap: pretty">
-    Every value below is a CSS custom property. Components reference the token, never the literal.
-    The whole accent ramp derives from one hue variable, <span class="mono">--sova-hue: 232</span>.
-  </p>
+        <!-- PALETTE -->
+        <p class="lbl" style="margin: 0 0 12px">Palette — light</p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+          "
+        >
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #f7f8fa"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">bg</div>
+              <div class="mono" style="color: #868ea3">#f7f8fa</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #ffffff; border-bottom: 1px solid #dfe3eb"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">surface</div>
+              <div class="mono" style="color: #868ea3">#ffffff</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #eef0f4"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">sunken</div>
+              <div class="mono" style="color: #868ea3">#eef0f4</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #2e47e5"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">primary</div>
+              <div class="mono" style="color: #868ea3">232 78% 54%</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #eceefe; border-bottom: 1px solid #cbd1f6"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">primary-soft</div>
+              <div class="mono" style="color: #868ea3">#eceefe</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #dfe3eb;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #ffffff;
+            "
+          >
+            <div style="height: 56px; background: #12151f"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500">text</div>
+              <div class="mono" style="color: #868ea3">#12151f</div>
+            </div>
+          </div>
+        </div>
 
-  <!-- PALETTE -->
-  <p class="lbl" style="margin: 0 0 12px">Palette — light</p>
-  <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px">
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #f7f8fa"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">bg</div><div class="mono" style="color: #868ea3">#f7f8fa</div></div>
-    </div>
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #ffffff; border-bottom: 1px solid #dfe3eb"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">surface</div><div class="mono" style="color: #868ea3">#ffffff</div></div>
-    </div>
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #eef0f4"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">sunken</div><div class="mono" style="color: #868ea3">#eef0f4</div></div>
-    </div>
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #2e47e5"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">primary</div><div class="mono" style="color: #868ea3">232 78% 54%</div></div>
-    </div>
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #ecEEfe; border-bottom: 1px solid #cbd1f6"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">primary-soft</div><div class="mono" style="color: #868ea3">#eceefe</div></div>
-    </div>
-    <div style="border: 1px solid #dfe3eb; border-radius: 10px; overflow: hidden; background: #ffffff">
-      <div style="height: 56px; background: #12151f"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500">text</div><div class="mono" style="color: #868ea3">#12151f</div></div>
-    </div>
-  </div>
+        <p class="lbl" style="margin: 0 0 12px">Palette — dark</p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+            background: #0e1017;
+            padding: 14px;
+            border-radius: 14px;
+          "
+        >
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #0e1017"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">bg</div>
+              <div class="mono" style="color: #767f94">#0e1017</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #171a23; border-bottom: 1px solid #272c39"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">surface</div>
+              <div class="mono" style="color: #767f94">#171a23</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #10131b"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">sunken</div>
+              <div class="mono" style="color: #767f94">#10131b</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #687bf3"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">primary</div>
+              <div class="mono" style="color: #767f94">232 85% 68%</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #1c2040; border-bottom: 1px solid #2e3560"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">primary-soft</div>
+              <div class="mono" style="color: #767f94">#1c2040</div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid #272c39;
+              border-radius: 10px;
+              overflow: hidden;
+              background: #171a23;
+            "
+          >
+            <div style="height: 56px; background: #eef0f6"></div>
+            <div style="padding: 8px 10px">
+              <div style="font-size: 12px; font-weight: 500; color: #eef0f6">text</div>
+              <div class="mono" style="color: #767f94">#eef0f6</div>
+            </div>
+          </div>
+        </div>
 
-  <p class="lbl" style="margin: 0 0 12px">Palette — dark</p>
-  <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px; background: #0e1017; padding: 14px; border-radius: 14px">
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #0e1017"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">bg</div><div class="mono" style="color: #767f94">#0e1017</div></div>
-    </div>
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #171a23; border-bottom: 1px solid #272c39"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">surface</div><div class="mono" style="color: #767f94">#171a23</div></div>
-    </div>
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #10131b"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">sunken</div><div class="mono" style="color: #767f94">#10131b</div></div>
-    </div>
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #687bf3"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">primary</div><div class="mono" style="color: #767f94">232 85% 68%</div></div>
-    </div>
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #1c2040; border-bottom: 1px solid #2e3560"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">primary-soft</div><div class="mono" style="color: #767f94">#1c2040</div></div>
-    </div>
-    <div style="border: 1px solid #272c39; border-radius: 10px; overflow: hidden; background: #171a23">
-      <div style="height: 56px; background: #eef0f6"></div>
-      <div style="padding: 8px 10px"><div style="font-size: 12px; font-weight: 500; color: #eef0f6">text</div><div class="mono" style="color: #767f94">#eef0f6</div></div>
-    </div>
-  </div>
+        <!-- STATUS -->
+        <p class="lbl" style="margin: 0 0 12px">Status — solid on soft, both themes</p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+          "
+        >
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="
+                background: #e7f6ee;
+                color: #157f4d;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Success · #157f4d on #e7f6ee
+            </div>
+            <div
+              style="
+                background: #10261d;
+                color: #5bd39a;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Success · dark
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="
+                background: #fdf3e2;
+                color: #9a6200;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Warning · #9a6200 on #fdf3e2
+            </div>
+            <div
+              style="
+                background: #2a2113;
+                color: #ecb45c;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Warning · dark
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div
+              style="
+                background: #fdeceb;
+                color: #b3261e;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Danger · #b3261e on #fdeceb
+            </div>
+            <div
+              style="
+                background: #2c1615;
+                color: #f28b84;
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 13px;
+                font-weight: 500;
+              "
+            >
+              Danger · dark
+            </div>
+          </div>
+        </div>
 
-  <!-- STATUS -->
-  <p class="lbl" style="margin: 0 0 12px">Status — solid on soft, both themes</p>
-  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 28px">
-    <div style="display: flex; flex-direction: column; gap: 8px">
-      <div style="background: #e7f6ee; color: #157f4d; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Success · #157f4d on #e7f6ee</div>
-      <div style="background: #10261d; color: #5bd39a; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Success · dark</div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 8px">
-      <div style="background: #fdf3e2; color: #9a6200; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Warning · #9a6200 on #fdf3e2</div>
-      <div style="background: #2a2113; color: #ecb45c; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Warning · dark</div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 8px">
-      <div style="background: #fdeceb; color: #b3261e; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Danger · #b3261e on #fdeceb</div>
-      <div style="background: #2c1615; color: #f28b84; border-radius: 10px; padding: 12px 14px; font-size: 13px; font-weight: 500">Danger · dark</div>
-    </div>
-  </div>
+        <!-- TYPE + SPACE + RADIUS + SHADOW -->
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+          <div
+            style="
+              background: #ffffff;
+              border: 1px solid #dfe3eb;
+              border-radius: 14px;
+              padding: 20px;
+            "
+          >
+            <p class="lbl" style="margin: 0 0 14px">Type scale</p>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">xl · 20px</span
+                ><span style="font-size: 20px; font-weight: 600">Page titles</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">lg · 16px</span
+                ><span style="font-size: 16px; font-weight: 600">Section titles</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">md · 14px</span
+                ><span style="font-size: 14px">Side-panel prose</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">base · 13px</span
+                ><span style="font-size: 13px">Extension body copy</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">sm · 12px</span
+                ><span style="font-size: 12px; color: #5b6377">Helper text and hints</span>
+              </div>
+              <div style="display: flex; align-items: baseline; gap: 12px">
+                <span class="mono" style="width: 96px; color: #868ea3">xs · 11px</span
+                ><span style="font-size: 11px; color: #868ea3">Badges, counters</span>
+              </div>
+            </div>
+            <p style="margin: 14px 0 0; font-size: 12px; color: #5b6377; text-wrap: pretty">
+              13 px body, not 16: extension surfaces are denser than a web page. Line heights 1.25 /
+              1.5 / 1.65.
+            </p>
+          </div>
 
-  <!-- TYPE + SPACE + RADIUS + SHADOW -->
-  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+          <div
+            style="
+              background: #ffffff;
+              border: 1px solid #dfe3eb;
+              border-radius: 14px;
+              padding: 20px;
+            "
+          >
+            <p class="lbl" style="margin: 0 0 14px">Space — 4 px base</p>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px">
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">1 · 4</span>
+                <div
+                  style="height: 10px; width: 4px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">2 · 8</span>
+                <div
+                  style="height: 10px; width: 8px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">3 · 12</span>
+                <div
+                  style="height: 10px; width: 12px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">4 · 16</span>
+                <div
+                  style="height: 10px; width: 16px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">5 · 24</span>
+                <div
+                  style="height: 10px; width: 24px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">6 · 32</span>
+                <div
+                  style="height: 10px; width: 32px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <span class="mono" style="width: 56px; color: #868ea3">7 · 48</span>
+                <div
+                  style="height: 10px; width: 48px; background: #2e47e5; border-radius: 2px"
+                ></div>
+              </div>
+            </div>
 
-    <div style="background: #ffffff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-      <p class="lbl" style="margin: 0 0 14px">Type scale</p>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">xl · 20px</span><span style="font-size: 20px; font-weight: 600">Page titles</span></div>
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">lg · 16px</span><span style="font-size: 16px; font-weight: 600">Section titles</span></div>
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">md · 14px</span><span style="font-size: 14px">Side-panel prose</span></div>
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">base · 13px</span><span style="font-size: 13px">Extension body copy</span></div>
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">sm · 12px</span><span style="font-size: 12px; color: #5b6377">Helper text and hints</span></div>
-        <div style="display: flex; align-items: baseline; gap: 12px"><span class="mono" style="width: 96px; color: #868ea3">xs · 11px</span><span style="font-size: 11px; color: #868ea3">Badges, counters</span></div>
+            <p class="lbl" style="margin: 0 0 12px">Radius &amp; elevation</p>
+            <div style="display: flex; gap: 12px; align-items: flex-end">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+                <div
+                  style="
+                    width: 56px;
+                    height: 44px;
+                    background: #ffffff;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 6px;
+                    box-shadow: 0 1px 2px rgb(15 18 28 / 0.06);
+                  "
+                ></div>
+                <span class="mono" style="color: #868ea3">sm 6</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+                <div
+                  style="
+                    width: 56px;
+                    height: 44px;
+                    background: #ffffff;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 12px rgb(15 18 28 / 0.08);
+                  "
+                ></div>
+                <span class="mono" style="color: #868ea3">md 10</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+                <div
+                  style="
+                    width: 56px;
+                    height: 44px;
+                    background: #ffffff;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 14px;
+                    box-shadow: 0 12px 32px rgb(15 18 28 / 0.16);
+                  "
+                ></div>
+                <span class="mono" style="color: #868ea3">lg 14</span>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+                <div
+                  style="
+                    width: 56px;
+                    height: 44px;
+                    background: #ffffff;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 9999px;
+                  "
+                ></div>
+                <span class="mono" style="color: #868ea3">full</span>
+              </div>
+            </div>
+            <p style="margin: 14px 0 0; font-size: 12px; color: #5b6377; text-wrap: pretty">
+              Shadow <span class="mono">lg</span> is reserved for the one surface that floats over
+              someone else's page.
+            </p>
+          </div>
+        </div>
       </div>
-      <p style="margin: 14px 0 0; font-size: 12px; color: #5b6377; text-wrap: pretty">
-        13 px body, not 16: extension surfaces are denser than a web page. Line heights 1.25 / 1.5 / 1.65.
-      </p>
-    </div>
-
-    <div style="background: #ffffff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-      <p class="lbl" style="margin: 0 0 14px">Space — 4 px base</p>
-      <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px">
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">1 · 4</span><div style="height: 10px; width: 4px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">2 · 8</span><div style="height: 10px; width: 8px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">3 · 12</span><div style="height: 10px; width: 12px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">4 · 16</span><div style="height: 10px; width: 16px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">5 · 24</span><div style="height: 10px; width: 24px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">6 · 32</span><div style="height: 10px; width: 32px; background: #2e47e5; border-radius: 2px"></div></div>
-        <div style="display: flex; align-items: center; gap: 12px"><span class="mono" style="width: 56px; color: #868ea3">7 · 48</span><div style="height: 10px; width: 48px; background: #2e47e5; border-radius: 2px"></div></div>
-      </div>
-
-      <p class="lbl" style="margin: 0 0 12px">Radius &amp; elevation</p>
-      <div style="display: flex; gap: 12px; align-items: flex-end">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
-          <div style="width: 56px; height: 44px; background: #ffffff; border: 1px solid #dfe3eb; border-radius: 6px; box-shadow: 0 1px 2px rgb(15 18 28 / 0.06)"></div>
-          <span class="mono" style="color: #868ea3">sm 6</span>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
-          <div style="width: 56px; height: 44px; background: #ffffff; border: 1px solid #dfe3eb; border-radius: 10px; box-shadow: 0 4px 12px rgb(15 18 28 / 0.08)"></div>
-          <span class="mono" style="color: #868ea3">md 10</span>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
-          <div style="width: 56px; height: 44px; background: #ffffff; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 12px 32px rgb(15 18 28 / 0.16)"></div>
-          <span class="mono" style="color: #868ea3">lg 14</span>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
-          <div style="width: 56px; height: 44px; background: #ffffff; border: 1px solid #dfe3eb; border-radius: 9999px"></div>
-          <span class="mono" style="color: #868ea3">full</span>
-        </div>
-      </div>
-      <p style="margin: 14px 0 0; font-size: 12px; color: #5b6377; text-wrap: pretty">
-        Shadow <span class="mono">lg</span> is reserved for the one surface that floats over someone else's page.
-      </p>
-    </div>
-  </div>
-
-</div>
-</x-dc>
-</body>
+    </x-dc>
+  </body>
 </html>

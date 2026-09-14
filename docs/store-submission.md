@@ -5,9 +5,9 @@
 `pnpm zip:all` produces:
 
 ```
-.output/sova-<version>-chrome.zip
-.output/sova-<version>-firefox.zip
-.output/sova-<version>-sources.zip   ← AMO requires this for bundled extensions
+.output/pagelingua-<version>-chrome.zip
+.output/pagelingua-<version>-firefox.zip
+.output/pagelingua-<version>-sources.zip   ← AMO requires this for bundled extensions
 ```
 
 Tagging `v*` runs `.github/workflows/release.yml`: it packages both targets,
@@ -29,7 +29,7 @@ attaches the zips to a GitHub release, and — after a manual approval on the
 
 1. Create an addons.mozilla.org account.
 2. Generate API credentials (JWT issuer + secret) in the developer hub.
-3. Repository secrets: `FIREFOX_EXTENSION_ID` (= `sova@laqua.fr`, the gecko id),
+3. Repository secrets: `FIREFOX_EXTENSION_ID` (= `pagelingua@laqua.fr`, the gecko id),
    `FIREFOX_JWT_ISSUER`, `FIREFOX_JWT_SECRET`.
 4. AMO reviews source for bundled extensions — the sources zip and a build note in
    the listing (Node version + `pnpm install && pnpm zip:firefox`) are required.

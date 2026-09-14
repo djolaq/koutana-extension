@@ -1,19 +1,19 @@
 {
-  "extName": { "message": "Sova" },
+  "extName": { "message": "PageLingua" },
   "extDescription": {
     "message": "Jede Seite übersetzen, umformulieren und befragen — mit Ihrem eigenen Infomaniak-AI-Konto."
   },
 
-  "cmdOpenSidePanel": { "message": "Sova-Panel öffnen" },
+  "cmdOpenSidePanel": { "message": "PageLingua-Panel öffnen" },
   "cmdTranslateSelection": { "message": "Auswahl übersetzen" },
 
-  "ctxTranslateSelection": { "message": "Mit Sova übersetzen" },
-  "ctxSummarizePage": { "message": "Diese Seite mit Sova zusammenfassen" },
-  "ctxAskAboutPage": { "message": "Sova zu dieser Seite befragen" },
+  "ctxTranslateSelection": { "message": "Mit PageLingua übersetzen" },
+  "ctxSummarizePage": { "message": "Diese Seite mit PageLingua zusammenfassen" },
+  "ctxAskAboutPage": { "message": "PageLingua zu dieser Seite befragen" },
 
   "settings": { "message": "Einstellungen" },
   "openSettings": { "message": "Einstellungen öffnen" },
-  "settingsTitle": { "message": "Sova-Einstellungen" },
+  "settingsTitle": { "message": "PageLingua-Einstellungen" },
   "close": { "message": "Schliessen" },
   "copy": { "message": "Kopieren" },
   "send": { "message": "Senden" },
@@ -21,7 +21,7 @@
 
   "notConnectedTitle": { "message": "Kein Konto verbunden" },
   "notConnectedBody": {
-    "message": "Sova nutzt Ihre eigenen Infomaniak-AI-Credits. Verbinden Sie Ihr Konto, um zu starten."
+    "message": "PageLingua nutzt Ihre eigenen Infomaniak-AI-Credits. Verbinden Sie Ihr Konto, um zu starten."
   },
   "connectAccount": { "message": "Mein Konto verbinden" },
   "connectedTitle": { "message": "Konto verbunden" },

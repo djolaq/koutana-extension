@@ -3,74 +3,74 @@
 
 /**
  * Bridges the design tokens into Tailwind v4 utilities so components can write
- * `bg-surface text-muted rounded-md` instead of inline `var(--sova-*)`.
+ * `bg-surface text-muted rounded-md` instead of inline `var(--pl-*)`.
  * Tailwind v4 is CSS-first: this @theme block IS the Tailwind config.
  */
 @theme inline {
-  --color-bg: var(--sova-bg);
-  --color-surface: var(--sova-surface);
-  --color-sunken: var(--sova-surface-sunken);
-  --color-hover: var(--sova-surface-hover);
+  --color-bg: var(--pl-bg);
+  --color-surface: var(--pl-surface);
+  --color-sunken: var(--pl-surface-sunken);
+  --color-hover: var(--pl-surface-hover);
 
-  --color-fg: var(--sova-text);
-  --color-muted: var(--sova-text-muted);
-  --color-subtle: var(--sova-text-subtle);
-  --color-on-primary: var(--sova-text-on-primary);
+  --color-fg: var(--pl-text);
+  --color-muted: var(--pl-text-muted);
+  --color-subtle: var(--pl-text-subtle);
+  --color-on-primary: var(--pl-text-on-primary);
 
-  --color-line: var(--sova-border);
-  --color-line-strong: var(--sova-border-strong);
+  --color-line: var(--pl-border);
+  --color-line-strong: var(--pl-border-strong);
 
-  --color-primary: var(--sova-primary);
-  --color-primary-hover: var(--sova-primary-hover);
-  --color-primary-soft: var(--sova-primary-soft);
+  --color-primary: var(--pl-primary);
+  --color-primary-hover: var(--pl-primary-hover);
+  --color-primary-soft: var(--pl-primary-soft);
 
-  --color-success: var(--sova-success);
-  --color-success-soft: var(--sova-success-soft);
-  --color-warning: var(--sova-warning);
-  --color-warning-soft: var(--sova-warning-soft);
-  --color-danger: var(--sova-danger);
-  --color-danger-soft: var(--sova-danger-soft);
+  --color-success: var(--pl-success);
+  --color-success-soft: var(--pl-success-soft);
+  --color-warning: var(--pl-warning);
+  --color-warning-soft: var(--pl-warning-soft);
+  --color-danger: var(--pl-danger);
+  --color-danger-soft: var(--pl-danger-soft);
 
-  --font-sans: var(--sova-font);
-  --font-mono: var(--sova-font-mono);
+  --font-sans: var(--pl-font);
+  --font-mono: var(--pl-font-mono);
 
-  --text-xs: var(--sova-text-xs);
-  --text-sm: var(--sova-text-sm);
-  --text-base: var(--sova-text-base);
-  --text-md: var(--sova-text-md);
-  --text-lg: var(--sova-text-lg);
-  --text-xl: var(--sova-text-xl);
+  --text-xs: var(--pl-text-xs);
+  --text-sm: var(--pl-text-sm);
+  --text-base: var(--pl-text-base);
+  --text-md: var(--pl-text-md);
+  --text-lg: var(--pl-text-lg);
+  --text-xl: var(--pl-text-xl);
 
-  --radius-sm: var(--sova-radius-sm);
-  --radius-md: var(--sova-radius-md);
-  --radius-lg: var(--sova-radius-lg);
+  --radius-sm: var(--pl-radius-sm);
+  --radius-md: var(--pl-radius-md);
+  --radius-lg: var(--pl-radius-lg);
 
-  --shadow-sm: var(--sova-shadow-sm);
-  --shadow-md: var(--sova-shadow-md);
-  --shadow-lg: var(--sova-shadow-lg);
+  --shadow-sm: var(--pl-shadow-sm);
+  --shadow-md: var(--pl-shadow-md);
+  --shadow-lg: var(--pl-shadow-lg);
 }
 
 @layer base {
   html,
   body {
     margin: 0;
-    background: var(--sova-bg);
-    color: var(--sova-text);
-    font-family: var(--sova-font);
-    font-size: var(--sova-text-base);
-    line-height: var(--sova-leading-normal);
+    background: var(--pl-bg);
+    color: var(--pl-text);
+    font-family: var(--pl-font);
+    font-size: var(--pl-text-base);
+    line-height: var(--pl-leading-normal);
     -webkit-font-smoothing: antialiased;
   }
 
   /* One visible focus style everywhere, keyboard-only. */
   :focus-visible {
-    outline: 2px solid var(--sova-focus-ring);
+    outline: 2px solid var(--pl-focus-ring);
     outline-offset: 2px;
-    border-radius: var(--sova-radius-sm);
+    border-radius: var(--pl-radius-sm);
   }
 
   ::selection {
-    background: var(--sova-primary-soft);
-    color: var(--sova-text);
+    background: var(--pl-primary-soft);
+    color: var(--pl-text);
   }
 }

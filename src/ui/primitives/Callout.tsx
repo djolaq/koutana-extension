@@ -4,7 +4,7 @@ import { cx } from '../cx';
 export type CalloutTone = 'info' | 'success' | 'warning' | 'danger';
 
 const tones: Record<CalloutTone, string> = {
-  info: 'bg-primary-soft text-fg border-[color:var(--sova-primary-soft-border)]',
+  info: 'bg-primary-soft text-fg border-[color:var(--pl-primary-soft-border)]',
   success: 'bg-success-soft text-success border-transparent',
   warning: 'bg-warning-soft text-warning border-transparent',
   danger: 'bg-danger-soft text-danger border-transparent',

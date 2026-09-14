@@ -1,9 +1,9 @@
 {
-  "name": "sova-extension",
+  "name": "pagelingua-extension",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Sova — bring Infomaniak AI Tools into your browser: translate, rewrite, summarise and chat, on your own account and credits.",
+  "description": "PageLingua — bring Infomaniak AI Tools into your browser: translate, rewrite, summarise and chat, on your own account and credits.",
   "license": "MIT",
   "engines": {
     "node": ">=22"

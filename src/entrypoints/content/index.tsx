@@ -38,11 +38,11 @@ export default defineContentScript({
     let pageSegments: Segment[] = [];
 
     const ui = await createShadowRootUi(ctx, {
-      name: 'sova-overlay',
+      name: 'pagelingua-overlay',
       position: 'overlay',
       anchor: 'body',
       onMount(container) {
-        container.setAttribute('data-sova-ui', '');
+        container.setAttribute('data-pagelingua-ui', '');
         root = createRoot(container);
         const update = (state: OverlayState) =>
           root?.render(<Overlay state={state} onClose={() => update({ kind: 'idle' })} />);

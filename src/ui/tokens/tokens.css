@@ -1,5 +1,5 @@
 /**
- * Sova design tokens — the single source of truth for every colour, radius,
+ * PageLingua design tokens — the single source of truth for every colour, radius,
  * space and duration in the extension.
  *
  * Rules:
@@ -16,170 +16,170 @@
 :root,
 :host {
   /* — Brand ------------------------------------------------------------- */
-  --sova-hue: 232;
+  --pl-hue: 232;
 
   /* — Surfaces ---------------------------------------------------------- */
-  --sova-bg: #f7f8fa;
-  --sova-surface: #ffffff;
-  --sova-surface-sunken: #eef0f4;
-  --sova-surface-hover: #f2f4f8;
-  --sova-overlay-scrim: rgb(15 18 28 / 0.32);
+  --pl-bg: #f7f8fa;
+  --pl-surface: #ffffff;
+  --pl-surface-sunken: #eef0f4;
+  --pl-surface-hover: #f2f4f8;
+  --pl-overlay-scrim: rgb(15 18 28 / 0.32);
 
   /* — Text -------------------------------------------------------------- */
-  --sova-text: #12151f;
-  --sova-text-muted: #5b6377;
-  --sova-text-subtle: #868ea3;
-  --sova-text-on-primary: #ffffff;
+  --pl-text: #12151f;
+  --pl-text-muted: #5b6377;
+  --pl-text-subtle: #868ea3;
+  --pl-text-on-primary: #ffffff;
 
   /* — Lines ------------------------------------------------------------- */
-  --sova-border: #dfe3eb;
-  --sova-border-strong: #c3c9d6;
-  --sova-focus-ring: hsl(var(--sova-hue) 90% 58%);
+  --pl-border: #dfe3eb;
+  --pl-border-strong: #c3c9d6;
+  --pl-focus-ring: hsl(var(--pl-hue) 90% 58%);
 
   /* — Accents ----------------------------------------------------------- */
-  --sova-primary: hsl(var(--sova-hue) 78% 54%);
-  --sova-primary-hover: hsl(var(--sova-hue) 78% 47%);
-  --sova-primary-soft: hsl(var(--sova-hue) 90% 96%);
-  --sova-primary-soft-border: hsl(var(--sova-hue) 70% 88%);
+  --pl-primary: hsl(var(--pl-hue) 78% 54%);
+  --pl-primary-hover: hsl(var(--pl-hue) 78% 47%);
+  --pl-primary-soft: hsl(var(--pl-hue) 90% 96%);
+  --pl-primary-soft-border: hsl(var(--pl-hue) 70% 88%);
 
-  --sova-success: #157f4d;
-  --sova-success-soft: #e7f6ee;
-  --sova-warning: #9a6200;
-  --sova-warning-soft: #fdf3e2;
-  --sova-danger: #b3261e;
-  --sova-danger-soft: #fdeceb;
+  --pl-success: #157f4d;
+  --pl-success-soft: #e7f6ee;
+  --pl-warning: #9a6200;
+  --pl-warning-soft: #fdf3e2;
+  --pl-danger: #b3261e;
+  --pl-danger-soft: #fdeceb;
 
   /* — Typography -------------------------------------------------------- */
-  --sova-font:
+  --pl-font:
     ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --sova-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  --pl-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
-  --sova-text-xs: 0.6875rem; /* 11px — badges, counters */
-  --sova-text-sm: 0.75rem; /* 12px — helper text */
-  --sova-text-base: 0.8125rem; /* 13px — extension body copy */
-  --sova-text-md: 0.875rem; /* 14px — side-panel prose */
-  --sova-text-lg: 1rem; /* 16px — section titles */
-  --sova-text-xl: 1.25rem; /* 20px — page titles */
+  --pl-text-xs: 0.6875rem; /* 11px — badges, counters */
+  --pl-text-sm: 0.75rem; /* 12px — helper text */
+  --pl-text-base: 0.8125rem; /* 13px — extension body copy */
+  --pl-text-md: 0.875rem; /* 14px — side-panel prose */
+  --pl-text-lg: 1rem; /* 16px — section titles */
+  --pl-text-xl: 1.25rem; /* 20px — page titles */
 
-  --sova-leading-tight: 1.25;
-  --sova-leading-normal: 1.5;
-  --sova-leading-prose: 1.65;
+  --pl-leading-tight: 1.25;
+  --pl-leading-normal: 1.5;
+  --pl-leading-prose: 1.65;
 
-  --sova-weight-normal: 400;
-  --sova-weight-medium: 500;
-  --sova-weight-semibold: 600;
+  --pl-weight-normal: 400;
+  --pl-weight-medium: 500;
+  --pl-weight-semibold: 600;
 
   /* — Space (4px base) -------------------------------------------------- */
-  --sova-space-1: 0.25rem;
-  --sova-space-2: 0.5rem;
-  --sova-space-3: 0.75rem;
-  --sova-space-4: 1rem;
-  --sova-space-5: 1.5rem;
-  --sova-space-6: 2rem;
-  --sova-space-7: 3rem;
+  --pl-space-1: 0.25rem;
+  --pl-space-2: 0.5rem;
+  --pl-space-3: 0.75rem;
+  --pl-space-4: 1rem;
+  --pl-space-5: 1.5rem;
+  --pl-space-6: 2rem;
+  --pl-space-7: 3rem;
 
   /* — Radii ------------------------------------------------------------- */
-  --sova-radius-sm: 6px;
-  --sova-radius-md: 10px;
-  --sova-radius-lg: 14px;
-  --sova-radius-full: 9999px;
+  --pl-radius-sm: 6px;
+  --pl-radius-md: 10px;
+  --pl-radius-lg: 14px;
+  --pl-radius-full: 9999px;
 
   /* — Elevation --------------------------------------------------------- */
-  --sova-shadow-sm: 0 1px 2px rgb(15 18 28 / 0.06), 0 1px 1px rgb(15 18 28 / 0.04);
-  --sova-shadow-md: 0 4px 12px rgb(15 18 28 / 0.08), 0 1px 3px rgb(15 18 28 / 0.06);
-  --sova-shadow-lg: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08);
+  --pl-shadow-sm: 0 1px 2px rgb(15 18 28 / 0.06), 0 1px 1px rgb(15 18 28 / 0.04);
+  --pl-shadow-md: 0 4px 12px rgb(15 18 28 / 0.08), 0 1px 3px rgb(15 18 28 / 0.06);
+  --pl-shadow-lg: 0 12px 32px rgb(15 18 28 / 0.16), 0 2px 8px rgb(15 18 28 / 0.08);
 
   /* — Motion ------------------------------------------------------------ */
-  --sova-duration-fast: 120ms;
-  --sova-duration-base: 200ms;
-  --sova-duration-slow: 320ms;
-  --sova-ease: cubic-bezier(0.2, 0, 0, 1);
+  --pl-duration-fast: 120ms;
+  --pl-duration-base: 200ms;
+  --pl-duration-slow: 320ms;
+  --pl-ease: cubic-bezier(0.2, 0, 0, 1);
 
   /* — Layering (content-script overlays only) --------------------------- */
-  --sova-z-handle: 2147483000;
-  --sova-z-popover: 2147483200;
-  --sova-z-scrim: 2147483400;
+  --pl-z-handle: 2147483000;
+  --pl-z-popover: 2147483200;
+  --pl-z-scrim: 2147483400;
 
   /* — Component sizing -------------------------------------------------- */
-  --sova-control-height: 32px;
-  --sova-control-height-sm: 26px;
-  --sova-popup-width: 360px;
-  --sova-tap-target: 32px; /* desktop-only surfaces; 44px on touch */
+  --pl-control-height: 32px;
+  --pl-control-height-sm: 26px;
+  --pl-popup-width: 360px;
+  --pl-tap-target: 32px; /* desktop-only surfaces; 44px on touch */
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']),
   :host(:not([data-theme='light'])) {
-    --sova-bg: #0e1017;
-    --sova-surface: #171a23;
-    --sova-surface-sunken: #10131b;
-    --sova-surface-hover: #1e222d;
-    --sova-overlay-scrim: rgb(0 0 0 / 0.5);
+    --pl-bg: #0e1017;
+    --pl-surface: #171a23;
+    --pl-surface-sunken: #10131b;
+    --pl-surface-hover: #1e222d;
+    --pl-overlay-scrim: rgb(0 0 0 / 0.5);
 
-    --sova-text: #eef0f6;
-    --sova-text-muted: #a3abbe;
-    --sova-text-subtle: #767f94;
+    --pl-text: #eef0f6;
+    --pl-text-muted: #a3abbe;
+    --pl-text-subtle: #767f94;
 
-    --sova-border: #272c39;
-    --sova-border-strong: #3a4152;
+    --pl-border: #272c39;
+    --pl-border-strong: #3a4152;
 
-    --sova-primary: hsl(var(--sova-hue) 85% 68%);
-    --sova-primary-hover: hsl(var(--sova-hue) 85% 74%);
-    --sova-primary-soft: hsl(var(--sova-hue) 40% 18%);
-    --sova-primary-soft-border: hsl(var(--sova-hue) 35% 28%);
-    --sova-text-on-primary: #0b0e15;
+    --pl-primary: hsl(var(--pl-hue) 85% 68%);
+    --pl-primary-hover: hsl(var(--pl-hue) 85% 74%);
+    --pl-primary-soft: hsl(var(--pl-hue) 40% 18%);
+    --pl-primary-soft-border: hsl(var(--pl-hue) 35% 28%);
+    --pl-text-on-primary: #0b0e15;
 
-    --sova-success: #5bd39a;
-    --sova-success-soft: #10261d;
-    --sova-warning: #ecb45c;
-    --sova-warning-soft: #2a2113;
-    --sova-danger: #f28b84;
-    --sova-danger-soft: #2c1615;
+    --pl-success: #5bd39a;
+    --pl-success-soft: #10261d;
+    --pl-warning: #ecb45c;
+    --pl-warning-soft: #2a2113;
+    --pl-danger: #f28b84;
+    --pl-danger-soft: #2c1615;
 
-    --sova-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-    --sova-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
-    --sova-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+    --pl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --pl-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+    --pl-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
   }
 }
 
 :root[data-theme='dark'],
 :host([data-theme='dark']) {
-  --sova-bg: #0e1017;
-  --sova-surface: #171a23;
-  --sova-surface-sunken: #10131b;
-  --sova-surface-hover: #1e222d;
-  --sova-overlay-scrim: rgb(0 0 0 / 0.5);
+  --pl-bg: #0e1017;
+  --pl-surface: #171a23;
+  --pl-surface-sunken: #10131b;
+  --pl-surface-hover: #1e222d;
+  --pl-overlay-scrim: rgb(0 0 0 / 0.5);
 
-  --sova-text: #eef0f6;
-  --sova-text-muted: #a3abbe;
-  --sova-text-subtle: #767f94;
+  --pl-text: #eef0f6;
+  --pl-text-muted: #a3abbe;
+  --pl-text-subtle: #767f94;
 
-  --sova-border: #272c39;
-  --sova-border-strong: #3a4152;
+  --pl-border: #272c39;
+  --pl-border-strong: #3a4152;
 
-  --sova-primary: hsl(var(--sova-hue) 85% 68%);
-  --sova-primary-hover: hsl(var(--sova-hue) 85% 74%);
-  --sova-primary-soft: hsl(var(--sova-hue) 40% 18%);
-  --sova-primary-soft-border: hsl(var(--sova-hue) 35% 28%);
-  --sova-text-on-primary: #0b0e15;
+  --pl-primary: hsl(var(--pl-hue) 85% 68%);
+  --pl-primary-hover: hsl(var(--pl-hue) 85% 74%);
+  --pl-primary-soft: hsl(var(--pl-hue) 40% 18%);
+  --pl-primary-soft-border: hsl(var(--pl-hue) 35% 28%);
+  --pl-text-on-primary: #0b0e15;
 
-  --sova-success: #5bd39a;
-  --sova-success-soft: #10261d;
-  --sova-warning: #ecb45c;
-  --sova-warning-soft: #2a2113;
-  --sova-danger: #f28b84;
-  --sova-danger-soft: #2c1615;
+  --pl-success: #5bd39a;
+  --pl-success-soft: #10261d;
+  --pl-warning: #ecb45c;
+  --pl-warning-soft: #2a2113;
+  --pl-danger: #f28b84;
+  --pl-danger-soft: #2c1615;
 
-  --sova-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --sova-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
-  --sova-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
+  --pl-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --pl-shadow-md: 0 4px 12px rgb(0 0 0 / 0.45);
+  --pl-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {
   :root,
   :host {
-    --sova-duration-fast: 1ms;
-    --sova-duration-base: 1ms;
-    --sova-duration-slow: 1ms;
+    --pl-duration-fast: 1ms;
+    --pl-duration-base: 1ms;
+    --pl-duration-slow: 1ms;
   }
 }

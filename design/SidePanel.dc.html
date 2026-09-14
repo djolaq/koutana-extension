@@ -1,116 +1,458 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-  <style>
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-    a { color: #2e47e5; } a:hover { color: #1a33d5; }
-    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
-  </style>
-</helmet>
+  <head>
+    <meta charset="utf-8" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <style>
+          body {
+            margin: 0;
+            font-family:
+              ui-sans-serif,
+              system-ui,
+              -apple-system,
+              'Segoe UI',
+              Roboto,
+              sans-serif;
+          }
+          a {
+            color: #2e47e5;
+          }
+          a:hover {
+            color: #1a33d5;
+          }
+          .lbl {
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #868ea3;
+          }
+        </style>
+      </helmet>
 
-<div style="padding: 40px; background: #f7f8fa; min-height: 100%; box-sizing: border-box; color: #12151f">
-  <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Side panel · 400 px</h1>
-  <p style="margin: 0 0 28px; font-size: 14px; color: #5b6377; max-width: 64ch; text-wrap: pretty">
-    Chrome renders it as a side panel, Firefox as a sidebar — one entrypoint, one layout.
-    The page is context by default, and switching it off is one visible checkbox, not a menu.
-  </p>
+      <div
+        style="
+          padding: 40px;
+          background: #f7f8fa;
+          min-height: 100%;
+          box-sizing: border-box;
+          color: #12151f;
+        "
+      >
+        <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">
+          Side panel · 400 px
+        </h1>
+        <p
+          style="
+            margin: 0 0 28px;
+            font-size: 14px;
+            color: #5b6377;
+            max-width: 64ch;
+            text-wrap: pretty;
+          "
+        >
+          Chrome renders it as a side panel, Firefox as a sidebar — one entrypoint, one layout. The
+          page is context by default, and switching it off is one visible checkbox, not a menu.
+        </p>
 
-  <div style="display: flex; gap: 40px; align-items: flex-start">
+        <div style="display: flex; gap: 40px; align-items: flex-start">
+          <!-- LIGHT, ACTIVE -->
+          <div>
+            <p class="lbl" style="margin: 0 0 10px">Streaming an answer · light</p>
+            <div
+              style="
+                width: 400px;
+                height: 620px;
+                background: #f7f8fa;
+                border: 1px solid #dfe3eb;
+                border-radius: 14px;
+                box-shadow: 0 4px 12px rgb(15 18 28 / 0.08);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 8px 12px;
+                  border-bottom: 1px solid #dfe3eb;
+                  background: #fff;
+                "
+              >
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <svg width="16" height="16" viewBox="0 0 128 128" aria-hidden="true">
+                    <rect width="128" height="128" rx="30" fill="#2e47e5" />
+                    <rect x="48" y="18" width="58" height="70" rx="8" fill="#fff" opacity="0.45" />
+                    <rect x="22" y="40" width="58" height="70" rx="8" fill="#fff" />
+                    <rect x="32" y="54" width="38" height="6" rx="3" fill="#c3c9d6" />
+                    <rect x="32" y="66" width="32" height="6" rx="3" fill="#c3c9d6" />
+                    <rect x="32" y="86" width="28" height="8" rx="4" fill="#2e47e5" />
+                  </svg>
+                  <span style="font-size: 13px; font-weight: 600">PageLingua</span>
+                </div>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    font-size: 12px;
+                    color: #5b6377;
+                  "
+                >
+                  <span
+                    style="
+                      width: 13px;
+                      height: 13px;
+                      border-radius: 4px;
+                      background: #2e47e5;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-width="3.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  </span>
+                  Use this page
+                </label>
+              </div>
 
-    <!-- LIGHT, ACTIVE -->
-    <div>
-      <p class="lbl" style="margin: 0 0 10px">Streaming an answer · light</p>
-      <div style="width: 400px; height: 620px; background: #f7f8fa; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 4px 12px rgb(15 18 28 / 0.08); display: flex; flex-direction: column; overflow: hidden">
+              <div
+                style="
+                  flex-grow: 1;
+                  padding: 12px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 12px;
+                  overflow: hidden;
+                "
+              >
+                <div
+                  style="
+                    align-self: flex-end;
+                    max-width: 90%;
+                    background: #2e47e5;
+                    color: #fff;
+                    border-radius: 14px 14px 6px 14px;
+                    padding: 8px 12px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                  "
+                >
+                  Quels sont les trois chiffres clés de cet article ?
+                </div>
+                <div
+                  style="
+                    background: #fff;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 14px;
+                    padding: 10px 12px;
+                    font-size: 14px;
+                    line-height: 1.65;
+                  "
+                >
+                  <p style="margin: 0 0 8px">Trois chiffres ressortent :</p>
+                  <ul
+                    style="
+                      margin: 0;
+                      padding-left: 18px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 4px;
+                    "
+                  >
+                    <li>+38 % de demande pour l'hébergement local sur douze mois</li>
+                    <li>4 nouveaux centres de calcul annoncés d'ici 2028</li>
+                    <li>61 % des PME interrogées citent la souveraineté avant le prix</li>
+                  </ul>
+                  <p style="margin: 8px 0 0; color: #5b6377">
+                    L'article ne donne pas de<span
+                      style="
+                        display: inline-block;
+                        width: 2px;
+                        height: 1em;
+                        background: #2e47e5;
+                        margin-left: 2px;
+                        vertical-align: text-bottom;
+                      "
+                    ></span>
+                  </p>
+                </div>
+              </div>
 
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-bottom: 1px solid #dfe3eb; background: #fff">
-          <div style="display: flex; align-items: center; gap: 8px">
-            <svg width="16" height="16" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="30" fill="#2e47e5"/><circle cx="48" cy="66" r="17" fill="#fff"/><circle cx="80" cy="66" r="17" fill="#fff"/><circle cx="48" cy="66" r="7" fill="#1b2547"/><circle cx="80" cy="66" r="7" fill="#1b2547"/></svg>
-            <span style="font-size: 13px; font-weight: 600">Sova</span>
-          </div>
-          <label style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #5b6377">
-            <span style="width: 13px; height: 13px; border-radius: 4px; background: #2e47e5; display: inline-flex; align-items: center; justify-content: center">
-              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            </span>
-            Use this page
-          </label>
-        </div>
-
-        <div style="flex-grow: 1; padding: 12px; display: flex; flex-direction: column; gap: 12px; overflow: hidden">
-          <div style="align-self: flex-end; max-width: 90%; background: #2e47e5; color: #fff; border-radius: 14px 14px 6px 14px; padding: 8px 12px; font-size: 14px; line-height: 1.5">
-            Quels sont les trois chiffres clés de cet article ?
-          </div>
-          <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 10px 12px; font-size: 14px; line-height: 1.65">
-            <p style="margin: 0 0 8px">Trois chiffres ressortent :</p>
-            <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px">
-              <li>+38 % de demande pour l'hébergement local sur douze mois</li>
-              <li>4 nouveaux centres de calcul annoncés d'ici 2028</li>
-              <li>61 % des PME interrogées citent la souveraineté avant le prix</li>
-            </ul>
-            <p style="margin: 8px 0 0; color: #5b6377">L'article ne donne pas de<span style="display: inline-block; width: 2px; height: 1em; background: #2e47e5; margin-left: 2px; vertical-align: text-bottom"></span></p>
-          </div>
-        </div>
-
-        <div style="border-top: 1px solid #dfe3eb; background: #fff; padding: 8px; display: flex; align-items: flex-end; gap: 6px">
-          <div style="flex-grow: 1; min-height: 32px; border: 1px solid #dfe3eb; border-radius: 10px; padding: 7px 10px; font-size: 14px; color: #868ea3">Ask a question…</div>
-          <span style="height: 32px; padding: 0 12px; border-radius: 10px; background: #fff; border: 1px solid #dfe3eb; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center">Stop</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- DARK, EMPTY -->
-    <div>
-      <p class="lbl" style="margin: 0 0 10px">Empty state · dark</p>
-      <div style="width: 400px; height: 620px; background: #0e1017; border: 1px solid #272c39; border-radius: 14px; box-shadow: 0 16px 40px rgb(0 0 0 / 0.6); display: flex; flex-direction: column; overflow: hidden">
-
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-bottom: 1px solid #272c39; background: #171a23">
-          <div style="display: flex; align-items: center; gap: 8px">
-            <svg width="16" height="16" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="30" fill="#687bf3"/><circle cx="48" cy="66" r="17" fill="#0b0e15"/><circle cx="80" cy="66" r="17" fill="#0b0e15"/><circle cx="48" cy="66" r="7" fill="#c9d1ff"/><circle cx="80" cy="66" r="7" fill="#c9d1ff"/></svg>
-            <span style="font-size: 13px; font-weight: 600; color: #eef0f6">Sova</span>
-          </div>
-          <label style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #a3abbe">
-            <span style="width: 13px; height: 13px; border-radius: 4px; background: #687bf3; display: inline-flex; align-items: center; justify-content: center">
-              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#0b0e15" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            </span>
-            Use this page
-          </label>
-        </div>
-
-        <div style="flex-grow: 1; padding: 12px; display: flex; flex-direction: column; gap: 10px">
-          <div style="background: #1c2040; border: 1px solid #2e3560; border-radius: 10px; padding: 12px">
-            <div style="font-size: 13px; font-weight: 600; color: #eef0f6">Ask about this page</div>
-            <div style="font-size: 13px; color: #a3abbe; margin-top: 4px; line-height: 1.5; text-wrap: pretty">
-              Summarise it, pull out the key figures, or ask anything about what you are reading.
+              <div
+                style="
+                  border-top: 1px solid #dfe3eb;
+                  background: #fff;
+                  padding: 8px;
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 6px;
+                "
+              >
+                <div
+                  style="
+                    flex-grow: 1;
+                    min-height: 32px;
+                    border: 1px solid #dfe3eb;
+                    border-radius: 10px;
+                    padding: 7px 10px;
+                    font-size: 14px;
+                    color: #868ea3;
+                  "
+                >
+                  Ask a question…
+                </div>
+                <span
+                  style="
+                    height: 32px;
+                    padding: 0 12px;
+                    border-radius: 10px;
+                    background: #fff;
+                    border: 1px solid #dfe3eb;
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: inline-flex;
+                    align-items: center;
+                  "
+                  >Stop</span
+                >
+              </div>
             </div>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 6px">
-            <div style="border: 1px solid #272c39; background: #171a23; border-radius: 10px; padding: 9px 12px; font-size: 13px; color: #eef0f6">Summarise this page</div>
-            <div style="border: 1px solid #272c39; background: #171a23; border-radius: 10px; padding: 9px 12px; font-size: 13px; color: #eef0f6">What are the key figures?</div>
-            <div style="border: 1px solid #272c39; background: #171a23; border-radius: 10px; padding: 9px 12px; font-size: 13px; color: #eef0f6">Explain this in simpler terms</div>
-          </div>
-          <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: #767f94; font-family: ui-monospace, Menlo, monospace">
-            <span>deep tier</span><span>1 284 tokens this session</span>
-          </div>
-        </div>
 
-        <div style="border-top: 1px solid #272c39; background: #171a23; padding: 8px; display: flex; align-items: flex-end; gap: 6px">
-          <div style="flex-grow: 1; min-height: 32px; border: 1px solid #272c39; border-radius: 10px; padding: 7px 10px; font-size: 14px; color: #767f94">Ask a question…</div>
-          <span style="height: 32px; padding: 0 12px; border-radius: 10px; background: #687bf3; color: #0b0e15; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; opacity: 0.5">Send</span>
+          <!-- DARK, EMPTY -->
+          <div>
+            <p class="lbl" style="margin: 0 0 10px">Empty state · dark</p>
+            <div
+              style="
+                width: 400px;
+                height: 620px;
+                background: #0e1017;
+                border: 1px solid #272c39;
+                border-radius: 14px;
+                box-shadow: 0 16px 40px rgb(0 0 0 / 0.6);
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 8px 12px;
+                  border-bottom: 1px solid #272c39;
+                  background: #171a23;
+                "
+              >
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <svg width="16" height="16" viewBox="0 0 128 128" aria-hidden="true">
+                    <rect width="128" height="128" rx="30" fill="#687bf3" />
+                    <rect x="48" y="18" width="58" height="70" rx="8" fill="#fff" opacity="0.45" />
+                    <rect x="22" y="40" width="58" height="70" rx="8" fill="#fff" />
+                    <rect x="32" y="54" width="38" height="6" rx="3" fill="#c3c9d6" />
+                    <rect x="32" y="66" width="32" height="6" rx="3" fill="#c3c9d6" />
+                    <rect x="32" y="86" width="28" height="8" rx="4" fill="#0b0e15" />
+                  </svg>
+                  <span style="font-size: 13px; font-weight: 600; color: #eef0f6">PageLingua</span>
+                </div>
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    font-size: 12px;
+                    color: #a3abbe;
+                  "
+                >
+                  <span
+                    style="
+                      width: 13px;
+                      height: 13px;
+                      border-radius: 4px;
+                      background: #687bf3;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#0b0e15"
+                      stroke-width="3.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                  </span>
+                  Use this page
+                </label>
+              </div>
+
+              <div
+                style="
+                  flex-grow: 1;
+                  padding: 12px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                "
+              >
+                <div
+                  style="
+                    background: #1c2040;
+                    border: 1px solid #2e3560;
+                    border-radius: 10px;
+                    padding: 12px;
+                  "
+                >
+                  <div style="font-size: 13px; font-weight: 600; color: #eef0f6">
+                    Ask about this page
+                  </div>
+                  <div
+                    style="
+                      font-size: 13px;
+                      color: #a3abbe;
+                      margin-top: 4px;
+                      line-height: 1.5;
+                      text-wrap: pretty;
+                    "
+                  >
+                    Summarise it, pull out the key figures, or ask anything about what you are
+                    reading.
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div
+                    style="
+                      border: 1px solid #272c39;
+                      background: #171a23;
+                      border-radius: 10px;
+                      padding: 9px 12px;
+                      font-size: 13px;
+                      color: #eef0f6;
+                    "
+                  >
+                    Summarise this page
+                  </div>
+                  <div
+                    style="
+                      border: 1px solid #272c39;
+                      background: #171a23;
+                      border-radius: 10px;
+                      padding: 9px 12px;
+                      font-size: 13px;
+                      color: #eef0f6;
+                    "
+                  >
+                    What are the key figures?
+                  </div>
+                  <div
+                    style="
+                      border: 1px solid #272c39;
+                      background: #171a23;
+                      border-radius: 10px;
+                      padding: 9px 12px;
+                      font-size: 13px;
+                      color: #eef0f6;
+                    "
+                  >
+                    Explain this in simpler terms
+                  </div>
+                </div>
+                <div
+                  style="
+                    margin-top: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 11px;
+                    color: #767f94;
+                    font-family: ui-monospace, Menlo, monospace;
+                  "
+                >
+                  <span>deep tier</span><span>1 284 tokens this session</span>
+                </div>
+              </div>
+
+              <div
+                style="
+                  border-top: 1px solid #272c39;
+                  background: #171a23;
+                  padding: 8px;
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 6px;
+                "
+              >
+                <div
+                  style="
+                    flex-grow: 1;
+                    min-height: 32px;
+                    border: 1px solid #272c39;
+                    border-radius: 10px;
+                    padding: 7px 10px;
+                    font-size: 14px;
+                    color: #767f94;
+                  "
+                >
+                  Ask a question…
+                </div>
+                <span
+                  style="
+                    height: 32px;
+                    padding: 0 12px;
+                    border-radius: 10px;
+                    background: #687bf3;
+                    color: #0b0e15;
+                    font-size: 13px;
+                    font-weight: 500;
+                    display: inline-flex;
+                    align-items: center;
+                    opacity: 0.5;
+                  "
+                  >Send</span
+                >
+              </div>
+            </div>
+            <p
+              style="
+                margin: 10px 0 0;
+                font-size: 12px;
+                color: #5b6377;
+                max-width: 400px;
+                text-wrap: pretty;
+              "
+            >
+              Three starter prompts instead of a blank box — and a running token count, because
+              these are the user's own credits being spent.
+            </p>
+          </div>
         </div>
       </div>
-      <p style="margin: 10px 0 0; font-size: 12px; color: #5b6377; max-width: 400px; text-wrap: pretty">
-        Three starter prompts instead of a blank box — and a running token count, because these are
-        the user's own credits being spent.
-      </p>
-    </div>
-
-  </div>
-</div>
-</x-dc>
-</body>
+    </x-dc>
+  </body>
 </html>

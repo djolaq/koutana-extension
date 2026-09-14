@@ -107,7 +107,7 @@ export const chatTask: TaskDefinition<{ history: ChatMessage[]; pageText?: strin
     const system: ChatMessage = {
       role: 'system',
       content:
-        `You are Sova, a browsing assistant running on Infomaniak AI. Answer in ${ctx.targetLanguage} ` +
+        `You are PageLingua, a browsing assistant running on Infomaniak AI. Answer in ${ctx.targetLanguage} ` +
         `unless the user writes in another language, in which case match theirs. Be concise and concrete. ` +
         `If the answer is not supported by the page context, say so instead of guessing.`,
     };

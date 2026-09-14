@@ -16,7 +16,7 @@ it cannot deliver tokens as they arrive.
 - `InfomaniakAiClient` is constructed only in `src/entrypoints/background.ts`.
   ESLint forbids `fetch` elsewhere and forbids importing `core/auth/*` or
   `core/settings/secrets` outside the background.
-- Streaming uses a long-lived port named `sova/stream`. The UI posts a
+- Streaming uses a long-lived port named `pagelingua/stream`. The UI posts a
   `StreamRequest`; the background posts `StreamEvent`s. Port disconnect aborts the
   upstream request through an `AbortController`.
 - SSE parsing is its own dependency-free module (`core/ai/sse.ts`) with unit tests,

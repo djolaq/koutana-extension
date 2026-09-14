@@ -7,7 +7,7 @@ Read this file first. It is the contract; everything else is detail.
 
 ## 1. What this project is
 
-**Sova** is a browser extension for Chrome/Chromium and Firefox that brings
+**PageLingua** is a browser extension for Chrome/Chromium and Firefox that brings
 **Infomaniak AI Tools** into the browser: translate a selection or a whole page,
 rewrite text in place, and ask questions about the page in a side panel.
 

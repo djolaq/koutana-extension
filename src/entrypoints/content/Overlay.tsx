@@ -18,12 +18,12 @@ export function Overlay({ state, onClose }: { state: OverlayState; onClose: () =
   return (
     <div
       className="fixed right-4 bottom-4 w-[360px] max-w-[calc(100vw-2rem)]"
-      style={{ zIndex: 'var(--sova-z-popover)' }}
+      style={{ zIndex: 'var(--pl-z-popover)' }}
       role="dialog"
       aria-live="polite"
       aria-label={t('extName')}
     >
-      <div className="overflow-hidden rounded-lg border border-line bg-surface shadow-[var(--sova-shadow-lg)]">
+      <div className="overflow-hidden rounded-lg border border-line bg-surface shadow-[var(--pl-shadow-lg)]">
         <header className="flex items-center justify-between gap-2 border-b border-line px-3 py-2">
           <span className="truncate text-sm font-semibold text-fg">{titleOf(state)}</span>
           <Button variant="ghost" size="sm" iconOnly onClick={onClose} aria-label={t('close')}>
@@ -31,7 +31,7 @@ export function Overlay({ state, onClose }: { state: OverlayState; onClose: () =
           </Button>
         </header>
 
-        <div className="max-h-[50vh] overflow-auto px-3 py-2.5 text-base leading-[var(--sova-leading-prose)] text-fg">
+        <div className="max-h-[50vh] overflow-auto px-3 py-2.5 text-base leading-[var(--pl-leading-prose)] text-fg">
           {state.kind === 'result' && (
             <>
               <p className="whitespace-pre-wrap">{state.body}</p>
@@ -77,7 +77,7 @@ function Progress({ done, total }: { done: number; total: number }) {
         aria-valuenow={percent}
       >
         <div
-          className="h-full rounded-full bg-primary transition-[width] duration-[var(--sova-duration-base)]"
+          className="h-full rounded-full bg-primary transition-[width] duration-[var(--pl-duration-base)]"
           style={{ width: `${percent}%` }}
         />
       </div>

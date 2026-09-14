@@ -54,7 +54,7 @@ export default defineConfig({
       ? {
           browser_specific_settings: {
             gecko: {
-              id: 'sova@laqua.fr',
+              id: 'pagelingua@laqua.fr',
               strict_min_version: '128.0',
               // Required by AMO since Nov 2025. Page text and selections are
               // sent to the user's OWN Infomaniak AI product to be processed;

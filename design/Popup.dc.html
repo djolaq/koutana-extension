@@ -1,105 +1,367 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-  <style>
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-    a { color: #2e47e5; } a:hover { color: #1a33d5; }
-    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
-    .row { height: 32px; padding: 0 12px; border-radius: 10px; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; }
-  </style>
-</helmet>
+  <head>
+    <meta charset="utf-8" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <style>
+          body {
+            margin: 0;
+            font-family:
+              ui-sans-serif,
+              system-ui,
+              -apple-system,
+              'Segoe UI',
+              Roboto,
+              sans-serif;
+          }
+          a {
+            color: #2e47e5;
+          }
+          a:hover {
+            color: #1a33d5;
+          }
+          .lbl {
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #868ea3;
+          }
+          .row {
+            height: 32px;
+            padding: 0 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 1px solid transparent;
+          }
+        </style>
+      </helmet>
 
-<div style="padding: 40px; background: #f7f8fa; min-height: 100%; box-sizing: border-box; color: #12151f">
-  <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Popup · 360 px</h1>
-  <p style="margin: 0 0 28px; font-size: 14px; color: #5b6377; max-width: 60ch; text-wrap: pretty">
-    A launcher, not a workspace. It answers three questions at a glance — am I connected,
-    what can I do here, where are the settings — and hands everything heavier to the side panel.
-  </p>
+      <div
+        style="
+          padding: 40px;
+          background: #f7f8fa;
+          min-height: 100%;
+          box-sizing: border-box;
+          color: #12151f;
+        "
+      >
+        <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">
+          Popup · 360 px
+        </h1>
+        <p
+          style="
+            margin: 0 0 28px;
+            font-size: 14px;
+            color: #5b6377;
+            max-width: 60ch;
+            text-wrap: pretty;
+          "
+        >
+          A launcher, not a workspace. It answers three questions at a glance — am I connected, what
+          can I do here, where are the settings — and hands everything heavier to the side panel.
+        </p>
 
-  <div style="display: flex; gap: 40px; align-items: flex-start">
+        <div style="display: flex; gap: 40px; align-items: flex-start">
+          <!-- CONNECTED, LIGHT -->
+          <div>
+            <p class="lbl" style="margin: 0 0 10px">Connected · light</p>
+            <div
+              style="
+                width: 360px;
+                background: #f7f8fa;
+                border: 1px solid #dfe3eb;
+                border-radius: 14px;
+                box-shadow: 0 12px 32px rgb(15 18 28 / 0.16);
+                overflow: hidden;
+              "
+            >
+              <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+                <div style="display: flex; align-items: center; justify-content: space-between">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <svg width="20" height="20" viewBox="0 0 128 128" aria-hidden="true">
+                      <rect width="128" height="128" rx="30" fill="#2e47e5" />
+                      <rect
+                        x="48"
+                        y="18"
+                        width="58"
+                        height="70"
+                        rx="8"
+                        fill="#fff"
+                        opacity="0.45"
+                      />
+                      <rect x="22" y="40" width="58" height="70" rx="8" fill="#fff" />
+                      <rect x="32" y="54" width="38" height="6" rx="3" fill="#c3c9d6" />
+                      <rect x="32" y="66" width="32" height="6" rx="3" fill="#c3c9d6" />
+                      <rect x="32" y="86" width="28" height="8" rx="4" fill="#2e47e5" />
+                    </svg>
+                    <span style="font-size: 16px; font-weight: 600">PageLingua</span>
+                  </div>
+                  <span
+                    style="
+                      font-size: 11px;
+                      padding: 3px 8px;
+                      border-radius: 9999px;
+                      background: #e7f6ee;
+                      color: #157f4d;
+                      font-weight: 600;
+                    "
+                    >Connected</span
+                  >
+                </div>
 
-    <!-- CONNECTED, LIGHT -->
-    <div>
-      <p class="lbl" style="margin: 0 0 10px">Connected · light</p>
-      <div style="width: 360px; background: #f7f8fa; border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 12px 32px rgb(15 18 28 / 0.16); overflow: hidden">
-        <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
-          <div style="display: flex; align-items: center; justify-content: space-between">
-            <div style="display: flex; align-items: center; gap: 8px">
-              <svg width="20" height="20" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="30" fill="#2e47e5"/><path d="M30 44 44 22 56 44Z" fill="#fff" opacity="0.92"/><path d="M98 44 84 22 72 44Z" fill="#fff" opacity="0.92"/><circle cx="48" cy="66" r="17" fill="#fff"/><circle cx="80" cy="66" r="17" fill="#fff"/><circle cx="48" cy="66" r="7" fill="#1b2547"/><circle cx="80" cy="66" r="7" fill="#1b2547"/><path d="M64 80 72 92 64 100 56 92Z" fill="#fff" opacity="0.92"/></svg>
-              <span style="font-size: 16px; font-weight: 600">Sova</span>
-            </div>
-            <span style="font-size: 11px; padding: 3px 8px; border-radius: 9999px; background: #e7f6ee; color: #157f4d; font-weight: 600">Connected</span>
-          </div>
+                <div style="display: flex; flex-direction: column; gap: 6px">
+                  <div
+                    class="row"
+                    style="background: #2e47e5; color: #fff; justify-content: flex-start"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="M15 4v16" />
+                    </svg>
+                    Open the panel
+                    <span
+                      style="
+                        margin-left: auto;
+                        font-size: 11px;
+                        opacity: 0.7;
+                        font-family: ui-monospace, Menlo, monospace;
+                      "
+                      >⌥⇧S</span
+                    >
+                  </div>
+                  <div
+                    class="row"
+                    style="background: #fff; border-color: #dfe3eb; justify-content: flex-start"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#5b6377"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6" />
+                    </svg>
+                    Translate this page
+                  </div>
+                  <div
+                    class="row"
+                    style="background: #fff; border-color: #dfe3eb; justify-content: flex-start"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#5b6377"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                    </svg>
+                    Translate the selection
+                    <span
+                      style="
+                        margin-left: auto;
+                        font-size: 11px;
+                        color: #868ea3;
+                        font-family: ui-monospace, Menlo, monospace;
+                      "
+                      >⌥⇧T</span
+                    >
+                  </div>
+                </div>
 
-          <div style="display: flex; flex-direction: column; gap: 6px">
-            <div class="row" style="background: #2e47e5; color: #fff; justify-content: flex-start">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg>
-              Open the panel
-              <span style="margin-left: auto; font-size: 11px; opacity: 0.7; font-family: ui-monospace, Menlo, monospace">⌥⇧S</span>
-            </div>
-            <div class="row" style="background: #fff; border-color: #dfe3eb; justify-content: flex-start">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b6377" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
-              Translate this page
-            </div>
-            <div class="row" style="background: #fff; border-color: #dfe3eb; justify-content: flex-start">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5b6377" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
-              Translate the selection
-              <span style="margin-left: auto; font-size: 11px; color: #868ea3; font-family: ui-monospace, Menlo, monospace">⌥⇧T</span>
-            </div>
-          </div>
-
-          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 4px; border-top: 1px solid #dfe3eb">
-            <span style="font-size: 12px; color: #868ea3">Runs on your Infomaniak AI credits</span>
-            <span style="font-size: 12px; color: #5b6377; padding: 4px 8px; border-radius: 6px">Settings</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- NOT CONNECTED, DARK -->
-    <div>
-      <p class="lbl" style="margin: 0 0 10px">First run · dark</p>
-      <div style="width: 360px; background: #0e1017; border: 1px solid #272c39; border-radius: 14px; box-shadow: 0 16px 40px rgb(0 0 0 / 0.6); overflow: hidden">
-        <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
-          <div style="display: flex; align-items: center; justify-content: space-between">
-            <div style="display: flex; align-items: center; gap: 8px">
-              <svg width="20" height="20" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="30" fill="#687bf3"/><path d="M30 44 44 22 56 44Z" fill="#0b0e15" opacity="0.85"/><path d="M98 44 84 22 72 44Z" fill="#0b0e15" opacity="0.85"/><circle cx="48" cy="66" r="17" fill="#0b0e15"/><circle cx="80" cy="66" r="17" fill="#0b0e15"/><circle cx="48" cy="66" r="7" fill="#c9d1ff"/><circle cx="80" cy="66" r="7" fill="#c9d1ff"/><path d="M64 80 72 92 64 100 56 92Z" fill="#0b0e15" opacity="0.85"/></svg>
-              <span style="font-size: 16px; font-weight: 600; color: #eef0f6">Sova</span>
-            </div>
-            <span style="font-size: 12px; color: #a3abbe">Settings</span>
-          </div>
-
-          <div style="background: #2a2113; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
-            <div style="display: flex; gap: 10px">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ecb45c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-              <div>
-                <div style="font-size: 13px; font-weight: 600; color: #ecb45c">No account connected</div>
-                <div style="font-size: 13px; color: #a3abbe; margin-top: 2px; text-wrap: pretty">Sova runs on your own Infomaniak AI credits. Connect your account to get started.</div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-top: 4px;
+                    border-top: 1px solid #dfe3eb;
+                  "
+                >
+                  <span style="font-size: 12px; color: #868ea3"
+                    >Runs on your Infomaniak AI credits</span
+                  >
+                  <span
+                    style="font-size: 12px; color: #5b6377; padding: 4px 8px; border-radius: 6px"
+                    >Settings</span
+                  >
+                </div>
               </div>
             </div>
-            <div class="row" style="background: #687bf3; color: #0b0e15; align-self: flex-start; height: 26px; font-size: 11px; padding: 0 10px; border-radius: 6px">Connect my account</div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 6px; opacity: 0.4">
-            <div class="row" style="background: #171a23; border-color: #272c39; color: #eef0f6; justify-content: flex-start">Open the panel</div>
-            <div class="row" style="background: #171a23; border-color: #272c39; color: #eef0f6; justify-content: flex-start">Translate this page</div>
-            <div class="row" style="background: #171a23; border-color: #272c39; color: #eef0f6; justify-content: flex-start">Translate the selection</div>
+          <!-- NOT CONNECTED, DARK -->
+          <div>
+            <p class="lbl" style="margin: 0 0 10px">First run · dark</p>
+            <div
+              style="
+                width: 360px;
+                background: #0e1017;
+                border: 1px solid #272c39;
+                border-radius: 14px;
+                box-shadow: 0 16px 40px rgb(0 0 0 / 0.6);
+                overflow: hidden;
+              "
+            >
+              <div style="padding: 16px; display: flex; flex-direction: column; gap: 12px">
+                <div style="display: flex; align-items: center; justify-content: space-between">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <svg width="20" height="20" viewBox="0 0 128 128" aria-hidden="true">
+                      <rect width="128" height="128" rx="30" fill="#687bf3" />
+                      <rect
+                        x="48"
+                        y="18"
+                        width="58"
+                        height="70"
+                        rx="8"
+                        fill="#fff"
+                        opacity="0.45"
+                      />
+                      <rect x="22" y="40" width="58" height="70" rx="8" fill="#fff" />
+                      <rect x="32" y="54" width="38" height="6" rx="3" fill="#c3c9d6" />
+                      <rect x="32" y="66" width="32" height="6" rx="3" fill="#c3c9d6" />
+                      <rect x="32" y="86" width="28" height="8" rx="4" fill="#0b0e15" />
+                    </svg>
+                    <span style="font-size: 16px; font-weight: 600; color: #eef0f6"
+                      >PageLingua</span
+                    >
+                  </div>
+                  <span style="font-size: 12px; color: #a3abbe">Settings</span>
+                </div>
+
+                <div
+                  style="
+                    background: #2a2113;
+                    border-radius: 10px;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                  "
+                >
+                  <div style="display: flex; gap: 10px">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#ecb45c"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      style="flex-shrink: 0; margin-top: 1px"
+                    >
+                      <path d="M12 9v4M12 17h.01" />
+                      <path
+                        d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+                      />
+                    </svg>
+                    <div>
+                      <div style="font-size: 13px; font-weight: 600; color: #ecb45c">
+                        No account connected
+                      </div>
+                      <div
+                        style="font-size: 13px; color: #a3abbe; margin-top: 2px; text-wrap: pretty"
+                      >
+                        PageLingua runs on your own Infomaniak AI credits. Connect your account to
+                        get started.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                    style="
+                      background: #687bf3;
+                      color: #0b0e15;
+                      align-self: flex-start;
+                      height: 26px;
+                      font-size: 11px;
+                      padding: 0 10px;
+                      border-radius: 6px;
+                    "
+                  >
+                    Connect my account
+                  </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 6px; opacity: 0.4">
+                  <div
+                    class="row"
+                    style="
+                      background: #171a23;
+                      border-color: #272c39;
+                      color: #eef0f6;
+                      justify-content: flex-start;
+                    "
+                  >
+                    Open the panel
+                  </div>
+                  <div
+                    class="row"
+                    style="
+                      background: #171a23;
+                      border-color: #272c39;
+                      color: #eef0f6;
+                      justify-content: flex-start;
+                    "
+                  >
+                    Translate this page
+                  </div>
+                  <div
+                    class="row"
+                    style="
+                      background: #171a23;
+                      border-color: #272c39;
+                      color: #eef0f6;
+                      justify-content: flex-start;
+                    "
+                  >
+                    Translate the selection
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p
+              style="
+                margin: 10px 0 0;
+                font-size: 12px;
+                color: #5b6377;
+                max-width: 360px;
+                text-wrap: pretty;
+              "
+            >
+              Actions stay visible but disabled, so a new user can see what the extension does
+              before connecting.
+            </p>
           </div>
         </div>
       </div>
-      <p style="margin: 10px 0 0; font-size: 12px; color: #5b6377; max-width: 360px; text-wrap: pretty">
-        Actions stay visible but disabled, so a new user can see what the extension does before connecting.
-      </p>
-    </div>
-
-  </div>
-</div>
-</x-dc>
-</body>
+    </x-dc>
+  </body>
 </html>

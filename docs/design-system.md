@@ -2,7 +2,7 @@
 
 ## Principle
 
-Sova appears **on top of someone else's page**. The design language is therefore
+PageLingua appears **on top of someone else's page**. The design language is therefore
 quiet: one accent colour, one elevation for floating surfaces, no decoration that
 competes with the content underneath. The extension should read as part of the
 browser, not as a third-party widget.
@@ -22,17 +22,17 @@ Three rules the whole system follows:
 
 | Group     | Tokens                                                                             | Notes                                                                   |
 | --------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Surfaces  | `--sova-bg`, `--sova-surface`, `--sova-surface-sunken`, `--sova-surface-hover`     | `surface` is where content sits; `bg` is the page behind it             |
-| Text      | `--sova-text`, `--sova-text-muted`, `--sova-text-subtle`, `--sova-text-on-primary` | three levels, no more                                                   |
-| Lines     | `--sova-border`, `--sova-border-strong`, `--sova-focus-ring`                       | focus ring is a separate token so it survives theme changes             |
-| Accent    | `--sova-primary`, `-hover`, `-soft`, `-soft-border`                                | derived from `--sova-hue: 232` — change the hue, the whole accent moves |
-| Status | `--sova-success` / `-warning` / `-danger`, each with a `-soft` variant | soft = background, solid = text/icon |
-| Type      | `--sova-text-xs … -xl`, three line-heights, three weights                          | 13px body: extension UI is denser than a web page                       |
-| Space     | `--sova-space-1 … -7`                                                              | 4px base                                                                |
+| Surfaces  | `--pl-bg`, `--pl-surface`, `--pl-surface-sunken`, `--pl-surface-hover`     | `surface` is where content sits; `bg` is the page behind it             |
+| Text      | `--pl-text`, `--pl-text-muted`, `--pl-text-subtle`, `--pl-text-on-primary` | three levels, no more                                                   |
+| Lines     | `--pl-border`, `--pl-border-strong`, `--pl-focus-ring`                       | focus ring is a separate token so it survives theme changes             |
+| Accent    | `--pl-primary`, `-hover`, `-soft`, `-soft-border`                                | derived from `--pl-hue: 232` — change the hue, the whole accent moves |
+| Status | `--pl-success` / `-warning` / `-danger`, each with a `-soft` variant | soft = background, solid = text/icon |
+| Type      | `--pl-text-xs … -xl`, three line-heights, three weights                          | 13px body: extension UI is denser than a web page                       |
+| Space     | `--pl-space-1 … -7`                                                              | 4px base                                                                |
 | Radius    | `sm 6 · md 10 · lg 14 · full`                                                      | controls `md`, cards `lg`                                               |
-| Elevation | `--sova-shadow-sm` / `-md` / `-lg` | `lg` is reserved for the content-script overlay |
-| Motion | `--sova-duration-fast` / `-base` / `-slow`, `--sova-ease` | all collapse to 1 ms under `prefers-reduced-motion` |
-| Layering | `--sova-z-handle` / `-popover` / `-scrim` | near the top of the 32-bit z-index range, because host pages fight dirty |
+| Elevation | `--pl-shadow-sm` / `-md` / `-lg` | `lg` is reserved for the content-script overlay |
+| Motion | `--pl-duration-fast` / `-base` / `-slow`, `--pl-ease` | all collapse to 1 ms under `prefers-reduced-motion` |
+| Layering | `--pl-z-handle` / `-popover` / `-scrim` | near the top of the 32-bit z-index range, because host pages fight dirty |
 
 Tailwind v4 consumes these through the `@theme inline` block in
 `src/ui/theme.css`, so components write `bg-surface text-muted rounded-md` and the

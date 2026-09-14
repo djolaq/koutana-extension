@@ -3,9 +3,30 @@
     { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1000, "h": 1200, "title": "Tokens" },
     { "file": "Components.dc.html", "x": 1120, "y": 0, "w": 1000, "h": 900, "title": "Components" },
     { "file": "Popup.dc.html", "x": 0, "y": 1340, "w": 900, "h": 700, "title": "Popup 360" },
-    { "file": "SidePanel.dc.html", "x": 1020, "y": 1340, "w": 960, "h": 820, "title": "Side panel" },
-    { "file": "Onboarding.dc.html", "x": 2100, "y": 1340, "w": 800, "h": 1000, "title": "Options / onboarding" },
-    { "file": "Overlay.dc.html", "x": 0, "y": 2480, "w": 1200, "h": 1080, "title": "Overlay on a page" }
+    {
+      "file": "SidePanel.dc.html",
+      "x": 1020,
+      "y": 1340,
+      "w": 960,
+      "h": 820,
+      "title": "Side panel"
+    },
+    {
+      "file": "Onboarding.dc.html",
+      "x": 2100,
+      "y": 1340,
+      "w": 800,
+      "h": 1000,
+      "title": "Options / onboarding"
+    },
+    {
+      "file": "Overlay.dc.html",
+      "x": 0,
+      "y": 2480,
+      "w": 1200,
+      "h": 1080,
+      "title": "Overlay on a page"
+    }
   ],
   "annotations": [
     {
@@ -13,7 +34,7 @@
       "x": 0,
       "y": -180,
       "w": 520,
-      "text": "Sova — design system + v1 screens.\nValues lifted from src/ui/tokens/tokens.css, hue 232, 13px body.\nStatic mockups: the built extension is the interactive version."
+      "text": "PageLingua — design system + v1 screens.\nValues lifted from src/ui/tokens/tokens.css, hue 232, 13px body.\nStatic mockups: the built extension is the interactive version."
     },
     {
       "id": "shadow-dom",

@@ -3,7 +3,7 @@ import { cx } from '../cx';
 
 const control =
   'w-full bg-surface text-fg border border-line rounded-md px-2.5 ' +
-  'h-[var(--sova-control-height)] text-base ' +
+  'h-[var(--pl-control-height)] text-base ' +
   'placeholder:text-subtle hover:border-line-strong ' +
   'disabled:opacity-50 disabled:pointer-events-none';
 

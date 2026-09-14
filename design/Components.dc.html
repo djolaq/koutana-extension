@@ -1,135 +1,432 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-  <style>
-    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-    a { color: #2e47e5; } a:hover { color: #1a33d5; }
-    .lbl { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: #868ea3; }
-    .btn { height: 32px; padding: 0 12px; border-radius: 10px; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid transparent; cursor: pointer; }
-    .btn-sm { height: 26px; padding: 0 8px; border-radius: 6px; font-size: 11px; }
-    .input { height: 32px; border-radius: 10px; border: 1px solid #dfe3eb; background: #fff; padding: 0 10px; font-size: 13px; color: #12151f; display: flex; align-items: center; }
-  </style>
-</helmet>
+  <head>
+    <meta charset="utf-8" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <style>
+          body {
+            margin: 0;
+            font-family:
+              ui-sans-serif,
+              system-ui,
+              -apple-system,
+              'Segoe UI',
+              Roboto,
+              sans-serif;
+          }
+          a {
+            color: #2e47e5;
+          }
+          a:hover {
+            color: #1a33d5;
+          }
+          .lbl {
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #868ea3;
+          }
+          .btn {
+            height: 32px;
+            padding: 0 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 1px solid transparent;
+            cursor: pointer;
+          }
+          .btn-sm {
+            height: 26px;
+            padding: 0 8px;
+            border-radius: 6px;
+            font-size: 11px;
+          }
+          .input {
+            height: 32px;
+            border-radius: 10px;
+            border: 1px solid #dfe3eb;
+            background: #fff;
+            padding: 0 10px;
+            font-size: 13px;
+            color: #12151f;
+            display: flex;
+            align-items: center;
+          }
+        </style>
+      </helmet>
 
-<div style="padding: 40px; background: #f7f8fa; color: #12151f; min-height: 100%; box-sizing: border-box">
-  <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Components</h1>
-  <p style="margin: 0 0 32px; font-size: 14px; color: #5b6377; max-width: 62ch">
-    Four primitives carry the whole extension. Anything more specific is built from them.
-  </p>
+      <div
+        style="
+          padding: 40px;
+          background: #f7f8fa;
+          color: #12151f;
+          min-height: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <h1 style="margin: 0 0 4px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">
+          Components
+        </h1>
+        <p style="margin: 0 0 32px; font-size: 14px; color: #5b6377; max-width: 62ch">
+          Four primitives carry the whole extension. Anything more specific is built from them.
+        </p>
 
-  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+          <!-- BUTTONS -->
+          <div
+            style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px"
+          >
+            <p class="lbl" style="margin: 0 0 14px">Button — 4 variants × 2 sizes</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
+              <span class="btn" style="background: #2e47e5; color: #fff">Connect account</span>
+              <span class="btn" style="background: #fff; color: #12151f; border-color: #dfe3eb"
+                >Translate page</span
+              >
+              <span class="btn" style="background: transparent; color: #5b6377">Settings</span>
+              <span class="btn" style="background: #fdeceb; color: #b3261e">Disconnect</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-bottom: 14px;
+                align-items: center;
+              "
+            >
+              <span class="btn btn-sm" style="background: #2e47e5; color: #fff">Copy</span>
+              <span
+                class="btn btn-sm"
+                style="background: #fff; color: #12151f; border-color: #dfe3eb"
+                >Stop</span
+              >
+              <span class="btn" style="background: #2e47e5; color: #fff; opacity: 0.5"
+                >Disabled</span
+              >
+              <span class="btn" style="background: #2e47e5; color: #fff">
+                <span
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 9999px;
+                    border: 2px solid rgb(255 255 255 / 0.45);
+                    border-top-color: #fff;
+                    display: inline-block;
+                  "
+                ></span>
+                Verifying…
+              </span>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center">
+              <span
+                class="btn"
+                style="
+                  background: #fff;
+                  color: #12151f;
+                  border-color: #dfe3eb;
+                  outline: 2px solid #344df4;
+                  outline-offset: 2px;
+                "
+                >Focus ring</span
+              >
+              <span style="font-size: 12px; color: #5b6377">keyboard only, never removed</span>
+            </div>
+          </div>
 
-    <!-- BUTTONS -->
-    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-      <p class="lbl" style="margin: 0 0 14px">Button — 4 variants × 2 sizes</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
-        <span class="btn" style="background: #2e47e5; color: #fff">Connect account</span>
-        <span class="btn" style="background: #fff; color: #12151f; border-color: #dfe3eb">Translate page</span>
-        <span class="btn" style="background: transparent; color: #5b6377">Settings</span>
-        <span class="btn" style="background: #fdeceb; color: #b3261e">Disconnect</span>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center">
-        <span class="btn btn-sm" style="background: #2e47e5; color: #fff">Copy</span>
-        <span class="btn btn-sm" style="background: #fff; color: #12151f; border-color: #dfe3eb">Stop</span>
-        <span class="btn" style="background: #2e47e5; color: #fff; opacity: 0.5">Disabled</span>
-        <span class="btn" style="background: #2e47e5; color: #fff">
-          <span style="width: 14px; height: 14px; border-radius: 9999px; border: 2px solid rgb(255 255 255 / 0.45); border-top-color: #fff; display: inline-block"></span>
-          Verifying…
-        </span>
-      </div>
-      <div style="display: flex; gap: 8px; align-items: center">
-        <span class="btn" style="background: #fff; color: #12151f; border-color: #dfe3eb; outline: 2px solid #344df4; outline-offset: 2px">Focus ring</span>
-        <span style="font-size: 12px; color: #5b6377">keyboard only, never removed</span>
-      </div>
-    </div>
+          <!-- FIELDS -->
+          <div
+            style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px"
+          >
+            <p class="lbl" style="margin: 0 0 14px">Field — label, control, hint or error</p>
+            <div style="display: flex; flex-direction: column; gap: 16px">
+              <div style="display: flex; flex-direction: column; gap: 6px">
+                <span style="font-size: 12px; font-weight: 500">AI product ID</span>
+                <div class="input" style="color: #868ea3">123456</div>
+                <span style="font-size: 12px; color: #5b6377"
+                  >The number shown in the AI Tools page of your Manager.</span
+                >
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 6px">
+                <span style="font-size: 12px; font-weight: 500">API token</span>
+                <div
+                  class="input"
+                  style="border-color: #b3261e; letter-spacing: 0.18em; color: #12151f"
+                >
+                  ••••••••••••••••
+                </div>
+                <span style="font-size: 12px; color: #b3261e"
+                  >This API token was rejected. Check it or create a new one.</span
+                >
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 6px">
+                <span style="font-size: 12px; font-weight: 500">Translate into</span>
+                <div class="input" style="justify-content: space-between">
+                  <span>Français</span>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#868ea3"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- FIELDS -->
-    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-      <p class="lbl" style="margin: 0 0 14px">Field — label, control, hint or error</p>
-      <div style="display: flex; flex-direction: column; gap: 16px">
-        <div style="display: flex; flex-direction: column; gap: 6px">
-          <span style="font-size: 12px; font-weight: 500">AI product ID</span>
-          <div class="input" style="color: #868ea3">123456</div>
-          <span style="font-size: 12px; color: #5b6377">The number shown in the AI Tools page of your Manager.</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 6px">
-          <span style="font-size: 12px; font-weight: 500">API token</span>
-          <div class="input" style="border-color: #b3261e; letter-spacing: 0.18em; color: #12151f">••••••••••••••••</div>
-          <span style="font-size: 12px; color: #b3261e">This API token was rejected. Check it or create a new one.</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 6px">
-          <span style="font-size: 12px; font-weight: 500">Translate into</span>
-          <div class="input" style="justify-content: space-between">
-            <span>Français</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#868ea3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <!-- CALLOUTS -->
+          <div
+            style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px"
+          >
+            <p class="lbl" style="margin: 0 0 14px">Callout — status, never colour alone</p>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <div
+                style="
+                  background: #eceefe;
+                  border: 1px solid #cbd1f6;
+                  border-radius: 10px;
+                  padding: 10px 12px;
+                  display: flex;
+                  gap: 10px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#2e47e5"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  style="flex-shrink: 0; margin-top: 1px"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 11v5M12 8h.01" />
+                </svg>
+                <div>
+                  <div style="font-size: 13px; font-weight: 600">Ask about this page</div>
+                  <div style="font-size: 13px; color: #5b6377; margin-top: 2px">
+                    Summarise it, pull out the key figures, or ask anything.
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  background: #e7f6ee;
+                  border-radius: 10px;
+                  padding: 10px 12px;
+                  display: flex;
+                  gap: 10px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#157f4d"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="flex-shrink: 0; margin-top: 1px"
+                >
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                <div>
+                  <div style="font-size: 13px; font-weight: 600; color: #157f4d">
+                    Account connected
+                  </div>
+                  <div style="font-size: 13px; color: #157f4d; opacity: 0.85; margin-top: 2px">
+                    Requests are billed to your Infomaniak AI credits.
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  background: #fdf3e2;
+                  border-radius: 10px;
+                  padding: 10px 12px;
+                  display: flex;
+                  gap: 10px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#9a6200"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="flex-shrink: 0; margin-top: 1px"
+                >
+                  <path d="M12 9v4M12 17h.01" />
+                  <path
+                    d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"
+                  />
+                </svg>
+                <div>
+                  <div style="font-size: 13px; font-weight: 600; color: #9a6200">
+                    No account connected
+                  </div>
+                  <div style="font-size: 13px; color: #9a6200; opacity: 0.85; margin-top: 2px">
+                    PageLingua runs on your own Infomaniak AI credits.
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  background: #fdeceb;
+                  border-radius: 10px;
+                  padding: 10px 12px;
+                  display: flex;
+                  gap: 10px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b3261e"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  style="flex-shrink: 0; margin-top: 1px"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v6M12 16h.01" />
+                </svg>
+                <div style="font-size: 13px; color: #b3261e">
+                  Your Infomaniak AI credits are exhausted.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD + DARK -->
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div
+              style="
+                background: #fff;
+                border: 1px solid #dfe3eb;
+                border-radius: 14px;
+                padding: 20px;
+              "
+            >
+              <p class="lbl" style="margin: 0 0 14px">Card — the options page is cards</p>
+              <div
+                style="
+                  border: 1px solid #dfe3eb;
+                  border-radius: 14px;
+                  box-shadow: 0 1px 2px rgb(15 18 28 / 0.06);
+                  overflow: hidden;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 12px 16px;
+                    border-bottom: 1px solid #dfe3eb;
+                  "
+                >
+                  <span style="font-size: 16px; font-weight: 600">Models</span>
+                  <span class="btn btn-sm" style="background: transparent; color: #5b6377"
+                    >Refresh</span
+                  >
+                </div>
+                <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
+                  <div style="display: flex; justify-content: space-between; font-size: 13px">
+                    <span style="color: #5b6377">Quick tasks</span
+                    ><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px"
+                      >loaded from /models</span
+                    >
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 13px">
+                    <span style="color: #5b6377">Standard tasks</span
+                    ><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px"
+                      >loaded from /models</span
+                    >
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 13px">
+                    <span style="color: #5b6377">Deep tasks</span
+                    ><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px"
+                      >loaded from /models</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: #0e1017;
+                border: 1px solid #272c39;
+                border-radius: 14px;
+                padding: 20px;
+              "
+            >
+              <p class="lbl" style="margin: 0 0 14px; color: #767f94">Same components, dark</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
+                <span class="btn" style="background: #687bf3; color: #0b0e15">Connect account</span>
+                <span class="btn" style="background: #171a23; color: #eef0f6; border-color: #272c39"
+                  >Translate page</span
+                >
+                <span class="btn" style="background: transparent; color: #a3abbe">Settings</span>
+                <span class="btn" style="background: #2c1615; color: #f28b84">Disconnect</span>
+              </div>
+              <div
+                style="
+                  background: #1c2040;
+                  border: 1px solid #2e3560;
+                  border-radius: 10px;
+                  padding: 10px 12px;
+                  display: flex;
+                  gap: 10px;
+                "
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#687bf3"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  style="flex-shrink: 0; margin-top: 1px"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 11v5M12 8h.01" />
+                </svg>
+                <div>
+                  <div style="font-size: 13px; font-weight: 600; color: #eef0f6">
+                    Ask about this page
+                  </div>
+                  <div style="font-size: 13px; color: #a3abbe; margin-top: 2px">
+                    Summarise it, pull out the key figures, or ask anything.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- CALLOUTS -->
-    <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-      <p class="lbl" style="margin: 0 0 14px">Callout — status, never colour alone</p>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <div style="background: #eceefe; border: 1px solid #cbd1f6; border-radius: 10px; padding: 10px 12px; display: flex; gap: 10px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2e47e5" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <div><div style="font-size: 13px; font-weight: 600">Ask about this page</div><div style="font-size: 13px; color: #5b6377; margin-top: 2px">Summarise it, pull out the key figures, or ask anything.</div></div>
-        </div>
-        <div style="background: #e7f6ee; border-radius: 10px; padding: 10px 12px; display: flex; gap: 10px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#157f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M20 6 9 17l-5-5"/></svg>
-          <div><div style="font-size: 13px; font-weight: 600; color: #157f4d">Account connected</div><div style="font-size: 13px; color: #157f4d; opacity: 0.85; margin-top: 2px">Requests are billed to your Infomaniak AI credits.</div></div>
-        </div>
-        <div style="background: #fdf3e2; border-radius: 10px; padding: 10px 12px; display: flex; gap: 10px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9a6200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-          <div><div style="font-size: 13px; font-weight: 600; color: #9a6200">No account connected</div><div style="font-size: 13px; color: #9a6200; opacity: 0.85; margin-top: 2px">Sova runs on your own Infomaniak AI credits.</div></div>
-        </div>
-        <div style="background: #fdeceb; border-radius: 10px; padding: 10px 12px; display: flex; gap: 10px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b3261e" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16h.01"/></svg>
-          <div style="font-size: 13px; color: #b3261e">Your Infomaniak AI credits are exhausted.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD + DARK -->
-    <div style="display: flex; flex-direction: column; gap: 24px">
-      <div style="background: #fff; border: 1px solid #dfe3eb; border-radius: 14px; padding: 20px">
-        <p class="lbl" style="margin: 0 0 14px">Card — the options page is cards</p>
-        <div style="border: 1px solid #dfe3eb; border-radius: 14px; box-shadow: 0 1px 2px rgb(15 18 28 / 0.06); overflow: hidden">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #dfe3eb">
-            <span style="font-size: 16px; font-weight: 600">Models</span>
-            <span class="btn btn-sm" style="background: transparent; color: #5b6377">Refresh</span>
-          </div>
-          <div style="padding: 16px; display: flex; flex-direction: column; gap: 10px">
-            <div style="display: flex; justify-content: space-between; font-size: 13px"><span style="color: #5b6377">Quick tasks</span><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px">loaded from /models</span></div>
-            <div style="display: flex; justify-content: space-between; font-size: 13px"><span style="color: #5b6377">Standard tasks</span><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px">loaded from /models</span></div>
-            <div style="display: flex; justify-content: space-between; font-size: 13px"><span style="color: #5b6377">Deep tasks</span><span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px">loaded from /models</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background: #0e1017; border: 1px solid #272c39; border-radius: 14px; padding: 20px">
-        <p class="lbl" style="margin: 0 0 14px; color: #767f94">Same components, dark</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px">
-          <span class="btn" style="background: #687bf3; color: #0b0e15">Connect account</span>
-          <span class="btn" style="background: #171a23; color: #eef0f6; border-color: #272c39">Translate page</span>
-          <span class="btn" style="background: transparent; color: #a3abbe">Settings</span>
-          <span class="btn" style="background: #2c1615; color: #f28b84">Disconnect</span>
-        </div>
-        <div style="background: #1c2040; border: 1px solid #2e3560; border-radius: 10px; padding: 10px 12px; display: flex; gap: 10px">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#687bf3" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 1px"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <div><div style="font-size: 13px; font-weight: 600; color: #eef0f6">Ask about this page</div><div style="font-size: 13px; color: #a3abbe; margin-top: 2px">Summarise it, pull out the key figures, or ask anything.</div></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</x-dc>
-</body>
+    </x-dc>
+  </body>
 </html>
