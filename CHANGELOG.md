@@ -16,3 +16,8 @@ versions follow [Semantic Versioning](https://semver.org/).
 - Five locales (en, fr, de, es, it) with a CI gate on completeness.
 - CI: lint, types, tests, locale check, both builds, `web-ext lint`; release
   workflow with gated store uploads.
+
+### Fixed
+
+- Settings / onboarding page now opens in its own tab instead of an embedded
+  dialog on `chrome://extensions`, so "Connect my account" reaches the form.
