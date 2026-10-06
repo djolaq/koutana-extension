@@ -9,6 +9,7 @@ import {
   type StreamEvent,
   type StreamRequest,
 } from '../core/messaging/protocol';
+import { sendToTab } from '../core/messaging/tab';
 import { resolveLanguage } from '../core/i18n/languages';
 import { t } from '../core/i18n/t';
 import { settingsStore } from '../core/settings/store';
@@ -52,10 +53,7 @@ export default defineBackground(() => {
     if (!tab?.id) return;
     switch (info.menuItemId) {
       case 'kounata.translateSelection':
-        await browser.tabs.sendMessage(tab.id, {
-          type: 'overlay/translate',
-          text: info.selectionText ?? '',
-        });
+        await sendToTab(tab.id, { type: 'overlay/translate', text: info.selectionText ?? '' });
         break;
       case 'kounata.summarizePage':
       case 'kounata.askAboutPage':
@@ -69,7 +67,7 @@ export default defineBackground(() => {
     if (!tab?.id) return;
     if (command === 'open-side-panel') await openSidePanel(tab.id);
     if (command === 'translate-selection') {
-      await browser.tabs.sendMessage(tab.id, { type: 'overlay/translateSelection' });
+      await sendToTab(tab.id, { type: 'overlay/translateSelection' });
     }
   });
 

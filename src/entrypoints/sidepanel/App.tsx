@@ -1,6 +1,7 @@
 import { browser } from '#imports';
 import { useEffect, useRef, useState } from 'react';
 import { stream, type StreamHandle } from '../../core/messaging/client';
+import { ALL_URLS, sendToTab } from '../../core/messaging/tab';
 import { t, tDynamic } from '../../core/i18n/t';
 import { Button } from '../../ui/primitives/Button';
 import { Callout } from '../../ui/primitives/Callout';
@@ -18,6 +19,8 @@ export function App() {
   const [usePage, setUsePage] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // The page could not be read and the optional <all_urls> grant would fix it.
+  const [pageUnreadable, setPageUnreadable] = useState(false);
   const handleRef = useRef<StreamHandle | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
@@ -35,6 +38,7 @@ export function App() {
     setTurns([...history, { role: 'assistant', content: '' }]);
 
     const page = usePage ? await readActivePage() : undefined;
+    setPageUnreadable(usePage && !page && !(await browser.permissions.contains(ALL_URLS)));
 
     handleRef.current = stream(
       { kind: 'chat', history, pageText: page?.text, title: page?.title, url: page?.url },
@@ -88,6 +92,25 @@ export function App() {
             </li>
           ))}
         </ul>
+        {pageUnreadable && (
+          <div className="mt-3">
+            <Callout tone="warning" title={t('pageAccessTitle')}>
+              <p>{t('pageAccessBody')}</p>
+              <Button
+                size="sm"
+                className="mt-2"
+                onClick={() =>
+                  // Called straight from the click: permissions.request needs the gesture.
+                  void browser.permissions
+                    .request(ALL_URLS)
+                    .then((granted) => granted && setPageUnreadable(false))
+                }
+              >
+                {t('pageAccessGrant')}
+              </Button>
+            </Callout>
+          </div>
+        )}
         {error && (
           <div className="mt-3">
             <Callout tone="danger">{error}</Callout>
@@ -134,12 +157,12 @@ async function readActivePage(): Promise<{ title: string; url: string; text: str
   const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
   if (!tab?.id) return undefined;
   try {
-    return (await browser.tabs.sendMessage(tab.id, { type: 'page/extract' })) as {
-      title: string;
-      url: string;
-      text: string;
-    };
+    return await sendToTab<{ title: string; url: string; text: string }>(tab.id, {
+      type: 'page/extract',
+    });
   } catch {
-    return undefined; // no content script on this page (store pages, PDFs, …)
+    // No activeTab grant on this tab and no optional <all_urls>, or a page no
+    // extension may script (store pages, about:, PDFs, …).
+    return undefined;
   }
 }

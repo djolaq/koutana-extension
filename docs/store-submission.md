@@ -51,7 +51,7 @@ listings:
 | `activeTab`, `scripting`                | Read the page the user explicitly acted on.                            |
 | `sidePanel` (Chrome)                    | The conversation panel.                                                |
 | `host_permissions: api.infomaniak.com`  | The only server contacted: the user's own AI product.                  |
-| `optional_host_permissions: <all_urls>` | Requested only when the user first translates a full page.             |
+| `optional_host_permissions: <all_urls>` | Requested from the side panel only if a tab cannot be read via activeTab. |
 
 Expect to be asked about data handling. The honest answers:
 

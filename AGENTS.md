@@ -152,7 +152,11 @@ This is the part reviewers at both stores look at, and the part users care about
   else. Adding a host is a product decision, not a refactor.
 - **No telemetry.** No analytics, no error reporting service, no ping. If you want
   metrics, the answer is no.
-- **`<all_urls>` is optional**, requested at first use of page translation.
+- **`<all_urls>` is optional.** The content script is never declared in the
+  manifest (a static `<all_urls>` content script makes the host permission
+  required): `core/messaging/tab.ts` → `sendToTab` injects it on a user gesture,
+  covered by `activeTab`. Only the side panel ever asks for `<all_urls>`, when it
+  cannot read a tab.
 - **Credentials in `storage.local` only**, never `storage.sync`. Extension storage
   is not encrypted; the options page tells the user so. Do not pretend otherwise
   in the UI copy.

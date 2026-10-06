@@ -1,6 +1,7 @@
 import { browser } from '#imports';
 import { useEffect, useState } from 'react';
 import { send } from '../../core/messaging/client';
+import { sendToTab } from '../../core/messaging/tab';
 import { t } from '../../core/i18n/t';
 import type { AuthStatus } from '../../core/auth/provider';
 import { Button } from '../../ui/primitives/Button';
@@ -26,8 +27,13 @@ export function App() {
 
   async function withActiveTab(action: (tabId: number) => Promise<unknown>) {
     const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
-    if (tab?.id) await action(tab.id);
-    window.close();
+    try {
+      if (tab?.id) await action(tab.id);
+    } catch {
+      /* the tab cannot be scripted (store page, about:, PDF viewer, …) */
+    } finally {
+      window.close();
+    }
   }
 
   return (
@@ -69,9 +75,7 @@ export function App() {
         <Button
           disabled={!connected}
           onClick={() =>
-            withActiveTab((tabId) =>
-              browser.tabs.sendMessage(tabId, { type: 'overlay/translatePage' }),
-            )
+            withActiveTab((tabId) => sendToTab(tabId, { type: 'overlay/translatePage' }))
           }
         >
           {t('actionTranslatePage')}
@@ -79,9 +83,7 @@ export function App() {
         <Button
           disabled={!connected}
           onClick={() =>
-            withActiveTab((tabId) =>
-              browser.tabs.sendMessage(tabId, { type: 'overlay/translateSelection' }),
-            )
+            withActiveTab((tabId) => sendToTab(tabId, { type: 'overlay/translateSelection' }))
           }
         >
           {t('actionTranslateSelection')}

@@ -108,5 +108,10 @@
   "error_network": { "message": "Impossibile raggiungere api.infomaniak.com." },
   "error_aborted": { "message": "Annullato." },
   "error_unknown": { "message": "Qualcosa è andato storto." },
-  "errorNoSelection": { "message": "Seleziona prima del testo." }
+  "errorNoSelection": { "message": "Seleziona prima del testo." },
+  "pageAccessTitle": { "message": "Impossibile leggere questa pagina" },
+  "pageAccessBody": {
+    "message": "La risposta non ha usato questa pagina. Consenti a Kounata di leggere le pagine su cui fai domande, oppure riapri il pannello da questa scheda."
+  },
+  "pageAccessGrant": { "message": "Consenti l'accesso alle pagine" }
 }

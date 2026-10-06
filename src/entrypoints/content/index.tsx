@@ -1,6 +1,7 @@
 import { browser, createShadowRootUi, defineContentScript } from '#imports';
 import { createRoot, type Root } from 'react-dom/client';
 import { stream } from '../../core/messaging/client';
+import { CONTENT_PONG, type TabMessage } from '../../core/messaging/tab';
 import { t, tDynamic } from '../../core/i18n/t';
 import { extractPage } from '../../core/page/extract';
 import {
@@ -25,11 +26,19 @@ import '../../ui/theme.css';
  * page's CSS cannot break us and our Tailwind reset cannot break the host page.
  */
 export default defineContentScript({
+  // Injected on demand by core/messaging/tab.ts, never declared in the manifest.
+  // `matches` only scopes the shadow-root CSS resource; wxt.config.ts strips it
+  // from host_permissions so it stays optional.
+  registration: 'runtime',
   matches: ['<all_urls>'],
-  runAt: 'document_idle',
   cssInjectionMode: 'ui',
 
   async main(ctx) {
+    // Two quick gestures can both inject before either has answered a ping.
+    const scope = window as Window & { __kounataLoaded?: boolean };
+    if (scope.__kounataLoaded) return;
+    scope.__kounataLoaded = true;
+
     const settings = await settingsStore.get();
     if (isBlocked(location.hostname, settings.blockedHosts)) return;
 
@@ -57,13 +66,15 @@ export default defineContentScript({
     });
     ui.mount();
 
-    browser.runtime.onMessage.addListener((message: { type: string; text?: string }) => {
+    browser.runtime.onMessage.addListener((message: TabMessage) => {
       switch (message.type) {
+        case 'content/ping':
+          return Promise.resolve(CONTENT_PONG);
         case 'overlay/translateSelection':
           void translateSelection(window.getSelection()?.toString() ?? '');
           return;
         case 'overlay/translate':
-          void translateSelection(message.text ?? '');
+          void translateSelection(message.text);
           return;
         case 'overlay/translatePage':
           void translatePage();
