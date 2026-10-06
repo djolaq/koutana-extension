@@ -112,5 +112,10 @@
   "error_network": { "message": "Impossible de joindre api.infomaniak.com." },
   "error_aborted": { "message": "Annulé." },
   "error_unknown": { "message": "Une erreur est survenue." },
-  "errorNoSelection": { "message": "Sélectionnez d'abord du texte." }
+  "errorNoSelection": { "message": "Sélectionnez d'abord du texte." },
+  "pageAccessTitle": { "message": "Impossible de lire cette page" },
+  "pageAccessBody": {
+    "message": "La réponse n'a pas utilisé cette page. Autorisez Kounata à lire les pages que vous interrogez, ou rouvrez le panneau depuis cet onglet."
+  },
+  "pageAccessGrant": { "message": "Autoriser l'accès aux pages" }
 }

@@ -108,5 +108,10 @@
   "error_network": { "message": "No se ha podido contactar con api.infomaniak.com." },
   "error_aborted": { "message": "Cancelado." },
   "error_unknown": { "message": "Algo ha salido mal." },
-  "errorNoSelection": { "message": "Selecciona texto primero." }
+  "errorNoSelection": { "message": "Selecciona texto primero." },
+  "pageAccessTitle": { "message": "No se ha podido leer esta página" },
+  "pageAccessBody": {
+    "message": "La respuesta no ha usado esta página. Permite que Kounata lea las páginas sobre las que preguntas, o vuelve a abrir el panel desde esta pestaña."
+  },
+  "pageAccessGrant": { "message": "Permitir acceso a las páginas" }
 }

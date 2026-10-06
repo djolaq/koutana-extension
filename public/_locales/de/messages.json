@@ -108,5 +108,10 @@
   "error_network": { "message": "api.infomaniak.com ist nicht erreichbar." },
   "error_aborted": { "message": "Abgebrochen." },
   "error_unknown": { "message": "Etwas ist schiefgelaufen." },
-  "errorNoSelection": { "message": "Wählen Sie zuerst Text aus." }
+  "errorNoSelection": { "message": "Wählen Sie zuerst Text aus." },
+  "pageAccessTitle": { "message": "Diese Seite konnte nicht gelesen werden" },
+  "pageAccessBody": {
+    "message": "Die Antwort hat diese Seite nicht berücksichtigt. Erlauben Sie Kounata, die Seiten zu lesen, zu denen Sie fragen, oder öffnen Sie das Panel in diesem Tab erneut."
+  },
+  "pageAccessGrant": { "message": "Seitenzugriff erlauben" }
 }

@@ -34,9 +34,10 @@ export default defineConfig({
     // The ONLY host we talk to. Declared statically so reviewers can verify it.
     host_permissions: ['https://api.infomaniak.com/*'],
 
-    // Full-page translation needs to read the DOM of the current tab. It is an
-    // optional permission so the extension installs with a minimal prompt and
-    // asks only when the user first uses that feature.
+    // The content script is injected on demand (core/messaging/tab.ts): a user
+    // gesture grants activeTab on that tab, which covers almost every flow. The
+    // side panel asks for this when it cannot read a tab the user switched to.
+    // Must stay out of host_permissions — see the hook below.
     optional_host_permissions: ['<all_urls>'],
 
     commands: {
@@ -68,6 +69,22 @@ export default defineConfig({
         }
       : {}),
   }),
+
+  hooks: {
+    // WXT copies a runtime content script's `matches` into host_permissions,
+    // which would make <all_urls> required again (and Chrome would then drop
+    // the optional one as redundant). Dev builds keep it because WXT's dev
+    // reloader registers content scripts itself, so there the optional entry is
+    // the one dropped. Production manifests must never contain it as required.
+    'build:manifestGenerated': (wxt, manifest) => {
+      const notAllUrls = (p: string) => p !== '<all_urls>';
+      if (wxt.config.command === 'serve') {
+        manifest.optional_host_permissions = manifest.optional_host_permissions?.filter(notAllUrls);
+      } else {
+        manifest.host_permissions = manifest.host_permissions?.filter(notAllUrls);
+      }
+    },
+  },
 
   // Firefox MV3 uses an event page, not a service worker. WXT handles the
   // translation; we only need to keep background code free of SW-only APIs.

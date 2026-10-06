@@ -100,5 +100,10 @@
   "error_network": { "message": "Could not reach api.infomaniak.com." },
   "error_aborted": { "message": "Cancelled." },
   "error_unknown": { "message": "Something went wrong." },
-  "errorNoSelection": { "message": "Select some text first." }
+  "errorNoSelection": { "message": "Select some text first." },
+  "pageAccessTitle": { "message": "This page could not be read" },
+  "pageAccessBody": {
+    "message": "The answer did not use this page. Allow Kounata to read the pages you ask about, or reopen the panel from this tab."
+  },
+  "pageAccessGrant": { "message": "Allow page access" }
 }
